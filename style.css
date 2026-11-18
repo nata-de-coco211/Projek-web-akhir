@@ -1,4 +1,9 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     --latar: #f5efe6;
@@ -134,11 +139,6 @@ p {
     max-width: 56ch;
 }
 
-.tombol-beranda {
-    gap: 12px;
-    margin-top: 26px;
-}
-
 .tombol {
     display: inline-block;
     padding: 10px 16px;
@@ -220,10 +220,6 @@ p {
 
 .catatan {
     margin-top: 20px;
-}
-
-.ajakan {
-    text-align: center;
 }
 
 footer {

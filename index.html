@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- NAVIGASI -->
     <header class="navigasi">
       <div class="wadah isi-navigasi">
         <a href="index.html" class="logo" aria-label="AKURASA Beranda">
@@ -21,13 +20,14 @@
         </a>
         <nav class="daftar-navigasi" id="navLinks" aria-label="Navigasi utama">
           <a href="index.html" aria-current="page">Beranda</a>
-          <a href="#best-seller"> Menu </a>
+          <a href="menu.html"> Menu </a>
           <a href="galeri.html"> Galeri </a>
           <a href="kontak.html"> Kontak </a>
         </nav>
       </div>
     </header>
-    <!-- CONTENT -->
+
+    <!-- COMMAND: EDIT KONTEN UTAMA / HERO -->
     <main>
       <div class="beranda" aria-labelledby="hero-title">
         <div class="wadah">
@@ -44,12 +44,15 @@
               berkesan.
             </p>
             <div class="tombol-beranda">
-              <a class="tombol tombol-hitam" href="#best-seller">Lihat Best Seller</a>
+              <a class="tombol tombol-hitam" href="#best-seller"
+                >Lihat Best Seller</a
+              >
               <a class="tombol kenali-kami" href="#tentang">Kenali Kami</a>
             </div>
           </div>
         </div>
       </div>
+
       <div class="bagian" id="tentang">
         <div class="card-tentangkami">
           <div class="judul-tentang">
@@ -74,17 +77,16 @@
           </div>
         </div>
       </div>
+
+      <!-- COMMAND: EDIT BAGIAN MENU BEST SELLER -->
       <div class="bagian bagian-menu" id="best-seller">
         <div class="wadah">
           <div class="judul-bagian muncul">
             <div class="judul-kecil">Pilihan Favorit</div>
             <h2>Menu Best Seller</h2>
-            <p>
-              Beberapa inspirasi menu favorit untuk ditampilkan pada beranda
-              AKURASA.
-            </p>
+            <p>Beberapa menu favorit yang di sediakan AKURASA</p>
           </div>
-          <!-- DATA CONTOH: ganti nama, foto, deskripsi, dan harga dengan menu resmi AKURASA. -->
+          <!-- nama, foto, deskripsi, dan harga dengan menu resmi AKURASA. -->
           <div class="daftar-menu">
             <article class="menu muncul">
               <div class="isi-menu">
@@ -117,22 +119,19 @@
               </div>
             </article>
           </div>
-          <p class="catatan">
-            * Nama menu, deskripsi, foto, dan harga di atas adalah contoh
-            desain, bukan daftar resmi AKURASA.
-          </p>
         </div>
       </div>
+
       <div class="ajakan wadah muncul">
         <div class="judul-kecil">Nikmati Momennya</div>
         <h2>Rasa yang Mengundang Cerita</h2>
         <p>
           Jelajahi pilihan menu dan temukan hidangan yang cocok untuk momenmu.
         </p>
-        <a href="#best-seller" class="tombol tombol-hitam"> Jelajahi Menu → </a>
+        <a href="menu.html" class="tombol tombol-hitam"> Jelajahi Menu → </a>
       </div>
     </main>
-    <!-- FOOTER -->
+
     <footer>
       <div class="wadah">
         <div class="isi-footer">
@@ -155,10 +154,7 @@
             </div>
           </div>
         </div>
-        <div class="hak-cipta">
-          
-          AKURASA 
-        </div>
+        <div class="hak-cipta">AKURASA</div>
       </div>
     </footer>
   </body>
