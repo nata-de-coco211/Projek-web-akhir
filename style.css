@@ -1,5 +1,12 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+﻿/* COMMAND: EDIT IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* SCROLL */
+html{
+    scroll-behavior: smooth;
+}
+
+/* COMMAND: EDIT VARIABEL WARNA */
 :root {
     --latar: #f5efe6;
     --permukaan: #fbf7f0;
@@ -9,6 +16,7 @@
     --garis: #d8cabb;
 }
 
+/* BODY */
 body {
     margin: 0;
     background: var(--latar);
@@ -17,12 +25,14 @@ body {
     line-height: 1.65;
 }
 
+/* COMMAND: EDIT LEBAR KONTEN */
 main,
 footer > .wadah {
     width: min(1100px, calc(100% - 40px));
     margin-inline: auto;
 }
 
+/* COMMAND: EDIT NAVIGASI */
 .navigasi {
     position: fixed;
     inset: 20px 0 auto;
@@ -37,6 +47,7 @@ footer > .wadah {
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
+/* COMMAND: EDIT HOVER NAVIGASI */
 @media (hover: hover) {
     .navigasi:hover {
         box-shadow: 0 0 15px rgba(48, 37, 31, 0.396);
@@ -44,12 +55,14 @@ footer > .wadah {
     }
 }
 
+/* COMMAND: EDIT TOMBOL BERANDA */
 .tombol-beranda {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
+/* COMMAND: EDIT ISI NAVIGASI */
 .isi-navigasi {
     display: flex;
     align-items: center;
@@ -57,6 +70,7 @@ footer > .wadah {
     gap: 12px;
 }
 
+/* COMMAND: EDIT LOGO */
 .gambar-logo {
     display: block;
     width: 56px;
@@ -64,12 +78,14 @@ footer > .wadah {
     object-fit: contain;
 }
 
+/* COMMAND: EDIT LINK NAVIGASI */
 .daftar-navigasi {
     display: flex;
     flex-wrap: wrap;
     gap: 0 clamp(8px, 1.8vw, 20px);
 }
 
+/* COMMAND: EDIT LINK FOOTER */
 .daftar-navigasi a,
 .tautan-footer a,
 .logo-footer {
@@ -77,11 +93,13 @@ footer > .wadah {
     text-decoration: none;
 }
 
+/* COMMAND: EDIT UKURAN LINK NAVIGASI */
 .daftar-navigasi a {
     padding-block: 8px;
     font-size: 0.875rem;
 }
 
+/* COMMAND: EDIT HOVER LINK NAVIGASI */
 .daftar-navigasi a:hover,
 .daftar-navigasi [aria-current="page"],
 .tautan-footer a:hover {
@@ -89,17 +107,20 @@ footer > .wadah {
     text-underline-offset: 5px;
 }
 
+/* COMMAND: EDIT SPACING SECTION */
 .beranda,
 .bagian,
 .ajakan {
     padding-block: clamp(44px, 8vw, 100px);
 }
 
+/* COMMAND: EDIT HERO */
 .beranda {
     margin-top: 92px;
     padding-top: clamp(64px, 12vw, 145px);
 }
 
+/* COMMAND: EDIT JUDUL KECIL */
 .judul-kecil {
     color: var(--aksen);
     font-size: 0.75rem;
@@ -108,6 +129,7 @@ footer > .wadah {
     text-transform: uppercase;
 }
 
+/* COMMAND: EDIT HEADING */
 h1,
 h2 {
     margin: 10px 0 16px;
@@ -115,30 +137,30 @@ h2 {
     line-height: 1.08;
 }
 
+/* COMMAND: EDIT JUDUL HERO */
 #hero-title {
     font-size: clamp(2.75rem, 8vw, 6.25rem);
     letter-spacing: -0.045em;
 }
 
+/* COMMAND: EDIT UKURAN H2 */
 h2 {
     font-size: clamp(2rem, 4vw, 3.25rem);
     letter-spacing: -0.025em;
 }
 
+/* COMMAND: EDIT PARAGRAF */
 p {
     color: var(--teks-redup);
 }
 
+/* COMMAND: EDIT LEBAR DESKRIPSI */
 .isi-beranda p,
 .isi-tentang {
     max-width: 56ch;
 }
 
-.tombol-beranda {
-    gap: 12px;
-    margin-top: 26px;
-}
-
+/* COMMAND: EDIT TOMBOL */
 .tombol {
     display: inline-block;
     padding: 10px 16px;
@@ -150,23 +172,27 @@ p {
     text-decoration: none;
 }
 
+/* COMMAND: EDIT WARNA TOMBOL */
 .tombol-hitam,
 .tombol:hover {
     background: var(--teks);
     color: var(--permukaan);
 }
 
+/* COMMAND: EDIT HOVER TOMBOL */
 .tombol-hitam:hover {
     background: var(--aksen);
     border-color: var(--aksen);
 }
 
+/* COMMAND: EDIT SECTION DAN SCROLL */
 .bagian,
 .ajakan {
     border-top: 1px solid var(--garis);
     scroll-margin-top: 88px;
 }
 
+/* COMMAND: EDIT GRID */
 .card-tentangkami,
 .daftar-menu,
 .isi-footer {
@@ -174,26 +200,31 @@ p {
     gap: clamp(20px, 4vw, 48px);
 }
 
+/* COMMAND: EDIT CARD TENTANG */
 .card-tentangkami {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
 }
 
+/* COMMAND: EDIT ISI TENTANG */
 .isi-tentang p:first-child {
     margin-top: 0;
 }
 
+/* COMMAND: EDIT LOKASI DAN CATATAN */
 .lokasi,
 .catatan {
     color: var(--teks-redup);
     font-size: 0.875rem;
 }
 
+/* COMMAND: EDIT GRID MENU */
 .daftar-menu {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
     gap: 16px;
     margin-top: 28px;
 }
 
+/* COMMAND: EDIT CARD MENU */
 .menu {
     display: flex;
     border: 1px solid var(--garis);
@@ -201,31 +232,32 @@ p {
     background: var(--permukaan);
 }
 
+/* COMMAND: EDIT ISI CARD MENU */
 .isi-menu {
     display: flex;
     flex-direction: column;
     padding: 22px;
 }
 
+/* COMMAND: EDIT JUDUL MENU */
 .isi-menu h3 {
     margin: 0;
     font-size: 1rem;
 }
 
+/* COMMAND: EDIT HARGA */
 .harga {
     margin-top: auto;
     color: var(--aksen);
     font-weight: 600;
 }
 
+/* COMMAND: EDIT CATATAN */
 .catatan {
     margin-top: 20px;
 }
 
-.ajakan {
-    text-align: center;
-}
-
+/* FOOTER */
 footer {
     padding-block: 32px 20px;
     border-top: 1px solid var(--garis);
@@ -260,6 +292,7 @@ footer {
     font-size: 0.75rem;
 }
 
+/* RESPONSIVE */
 @media (max-width: 620px) {
     .card-tentangkami,
     .isi-footer {
