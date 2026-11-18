@@ -1,11 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    hghfhg
-</body>
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKURASA | Beranda</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVIGASI -->
+    <header class="navigasi">
+      <div class="wadah isi-navigasi">
+        <a href="index.html" class="logo" aria-label="AKURASA Beranda">
+          <img
+            class="gambar-logo"
+            src="images/logo.png"
+            alt="Logo AKURASA"
+            width="56"
+            height="56"
+          />
+        </a>
+        <nav class="daftar-navigasi" id="navLinks" aria-label="Navigasi utama">
+          <a href="index.html" aria-current="page"> Beranda </a>
+          <a href="menu.html"> Menu </a>
+          <a href="galeri.html"> Galeri </a>
+          <a href="kontak.html"> Kontak </a>
+        </nav>
+      </div>
+    </header>
+    <!-- CONTENT -->
+    <main>
+      <div class="beranda" aria-labelledby="hero-title">
+        <div class="wadah">
+          <div class="isi-beranda">
+            <div class="judul-kecil">A TASTE TO REMEMBER</div>
+            <h1 id="hero-title">
+              Setiap Rasa,
+              <br />
+              Punya Cerita.
+            </h1>
+            <p>
+              Temukan pengalaman bersantap yang hangat di AKURASA. Tempat untuk
+              menikmati hidangan lezat, berbagi cerita, dan menciptakan momen
+              berkesan.
+            </p>
+            <div class="tombol-beranda">
+              <button class="best-seller">
+                <a href="#best-seller"> Lihat Best Seller </a>
+              </button>
+              <button class="kenali-kami">
+                <a href="#tentang"> Kenali Kami </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bagian" id="tentang">
+        <div class="card-tentangkami">
+          <div class="foto-cafe">
+            <img src="" alt="" />
+          </div>
+          <div class="isi-tentang muncul">
+            <div class="judul-kecil">Tentang Kami</div>
+            <h2>Selamat Datang di AKURASA</h2>
+            <div class="lokasi">Ubud, Bali</div>
+            <p>
+              AKURASA adalah restoran yang berlokasi di kawasan Ubud, Bali.
+              Dalam rancangan website ini, AKURASA diperkenalkan sebagai tempat
+              berkumpul untuk menikmati makanan dan suasana yang nyaman bersama
+              keluarga maupun teman.
+            </p>
+            <p>
+              Kami ingin setiap kunjungan menjadi pengalaman yang menyenangkan —
+              bukan hanya tentang makanan, tetapi juga tentang kebersamaan.
+            </p>
+            <a href="kontak.html" class="tombol tombol-hitam">
+              Hubungi Kami →
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bagian bagian-menu" id="best-seller">
+        <div class="wadah">
+          <div class="judul-bagian muncul">
+            <div class="judul-kecil">Pilihan Favorit</div>
+            <h2>Menu Best Seller</h2>
+            <p>
+              Beberapa inspirasi menu favorit untuk ditampilkan pada beranda
+              AKURASA.
+            </p>
+          </div>
+          <!-- DATA CONTOH: ganti nama, foto, deskripsi, dan harga dengan menu resmi AKURASA. -->
+          <div class="daftar-menu">
+            <article class="menu muncul">
+              <div class="foto-menu">
+                <img src="" alt="" />
+              </div>
+              <div class="isi-menu">
+                <h3>Ayam Bakar Spesial</h3>
+                <p>
+                  Ayam berbumbu rempah, dibakar hingga harum, disajikan dengan
+                  nasi hangat dan sambal.
+                </p>
+                <div class="harga">Rp45.000</div>
+              </div>
+            </article>
+            <article class="menu muncul">
+              <div class="foto-menu">
+                <img src="" alt="" />
+              </div>
+              <div class="isi-menu">
+                <h3>Nasi Goreng Istimewa</h3>
+                <p>
+                  Nasi goreng gurih dengan bumbu pilihan, telur, dan pelengkap
+                  segar.
+                </p>
+                <div class="harga">Rp38.000</div>
+              </div>
+            </article>
+            <article class="menu muncul">
+              <div class="foto-menu">
+                <img src="" alt="" />
+              </div>
+              <div class="isi-menu">
+                <h3>Es Tropis Segar</h3>
+                <p>
+                  Minuman dingin bercita rasa buah tropis yang menyegarkan saat
+                  bersantai.
+                </p>
+                <div class="harga">Rp25.000</div>
+              </div>
+            </article>
+          </div>
+          <p class="catatan">
+            * Nama menu, deskripsi, foto, dan harga di atas adalah contoh
+            desain, bukan daftar resmi AKURASA.
+          </p>
+          <div class="tengah">
+            <a href="menu.html" class="tombol tombol-hitam">
+              Lihat Semua Menu →
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ajakan wadah muncul">
+        <div class="judul-kecil">Nikmati Momennya</div>
+        <h2>Rasa yang Mengundang Cerita</h2>
+        <p>
+          Jelajahi pilihan menu dan temukan hidangan yang cocok untuk momenmu.
+        </p>
+        <a href="menu.html" class="tombol tombol-hitam"> Jelajahi Menu → </a>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+      <div class="wadah">
+        <div class="isi-footer">
+          <div>
+            <a class="logo logo-footer" href="index.html">
+              <img src="" alt="" />
+              <div class="nama-restoran">AKURASA</div>
+            </a>
+            <p>
+              Tempat menikmati hidangan, suasana hangat, dan cerita yang
+              berkesan di Ubud, Bali.
+            </p>
+          </div>
+          <div>
+            <strong> Jelajahi </strong>
+            <div class="tautan-footer">
+              <a href="index.html"> Beranda </a>
+              <a href="menu.html"> Menu </a>
+              <a href="galeri.html"> Galeri </a>
+              <a href="kontak.html"> Kontak </a>
+            </div>
+          </div>
+        </div>
+        <div class="hak-cipta">
+          ©
+          <div id="year"></div>
+          AKURASA •
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+  </body>
 </html>
