@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* BERANDA */
+body{
+    background: #E8DFD2;
+    font-family: 'Poppins', sans-serif;
+    color: #30251F;
+}
+
+/* HEADER */
+header{
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    width: 40%;
+    margin: 0 auto;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F5EFE6;
+    border-radius: 50px;
+    z-index: 1000;
+    box-shadow: 0 0px 15px rgba(48, 37, 31, 0.15);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+header:hover{
+    box-shadow: 0 0px 15px rgba(48, 37, 31, 0.396);
+    transform: scale(1.05);
+}
+
+/* NAVIGASI BAR */
+.wadah.isi-navigasi{
+   display: flex;
+   align-items: center;
+   gap: 25px;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.daftar-navigasi{
+    display: flex;
+    gap: 20px;    
+}
+
+.daftar-navigasi a{
+    text-decoration: none;
+    color: #30251F;
+}
+
+/* CONTENT */
+main{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.judul-kecil{
+    letter-spacing: 4px;
+}
+
+#hero-title{
+    font-size: 56px;
+    margin-top: 5px;
+}
+
+.isi-beranda p{
+    max-width: 580px;
+}
+
+/* TOMBOL BEST SELLER*/
+.best-seller {
+    border-radius: 10px;
+    border: 2px solid #30251F;
+    padding: 10px 15px;
+    background-color: #F5EFE6;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.best-seller:hover {
+    background-color: #30251F;
+    transform: scale(1.10);
+}
+
+.best-seller a {
+    text-decoration: none;
+    color: #30251F;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.best-seller:hover a {
+    color: #F5EFE6;
+}
+
+/* TOMBOL KENALI KAMI*/
+.kenali-kami {
+    border-radius: 10px;
+    border: 2px solid #30251F;
+    padding: 10px 15px;
+    background-color: #F5EFE6;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.kenali-kami:hover {
+    background-color: #30251F;
+    transform: scale(1.10);
+}
+
+.kenali-kami a {
+    text-decoration: none;
+    color: #30251F;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.kenali-kami:hover a {
+    color: #F5EFE6;
+}
+
