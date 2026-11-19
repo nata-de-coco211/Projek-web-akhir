@@ -1,13 +1,13 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* Dasar halaman dan tipografi */
 :root {
     --latar: #f5efe6;
-    --permukaan: #fbf7f0;
-    --teks: #30251f;
-    --teks-redup: #66564b;
-    --aksen: #785438;
-    --garis: #d8cabb;
+    --permukaan: #fffdf8;
+    --teks: #243638;
+    --teks-redup: #536667;
+    --aksen: #41676a;
+    --garis: color-mix(in srgb, var(--teks) 20%, var(--permukaan));
 }
 
 html {
@@ -62,15 +62,15 @@ p {
     width: min(max(40%, 340px), calc(100% - 24px));
     margin-inline: auto;
     padding: 8px clamp(10px, 2vw, 20px);
-    background: var(--latar);
+    background: var(--permukaan);
     border-radius: 50px;
-    box-shadow: 0 0 15px rgba(48, 37, 31, 0.15);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--teks) 15%, transparent);
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
 @media (hover: hover) {
     .navigasi:hover {
-        box-shadow: 0 0 15px rgba(48, 37, 31, 0.396);
+        box-shadow: 0 0 15px color-mix(in srgb, var(--teks) 40%, transparent);
         transform: scale(1.05);
     }
 }
@@ -122,6 +122,8 @@ p {
     font-size: 0.875rem;
     font-weight: 600;
     text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+        background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .tombol-hitam {
@@ -129,29 +131,42 @@ p {
     color: var(--permukaan);
 }
 
-.tombol:hover {
-    background: var(--teks);
+.tombol:is(:hover, :focus-visible, :active) {
+    background-color: var(--teks);
     color: var(--permukaan);
+    box-shadow: 0 5px 12px color-mix(in srgb, var(--teks) 24%, transparent);
+    transform: scale(1.04);
 }
 
-.tombol-hitam:hover {
-    background: var(--aksen);
+.tombol-hitam:is(:hover, :focus-visible, :active) {
+    background-color: var(--aksen);
     border-color: var(--aksen);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tombol {
+        transition: none;
+    }
+
+    .tombol:is(:hover, :focus-visible, :active) {
+        transform: none;
+    }
 }
 
 /* Pembuka beranda */
 .beranda {
     padding-block: clamp(44px, 8vw, 100px);
     margin-top: 92px;
-    padding-top: clamp(64px, 12vw, 145px);
+    margin-inline-start: clamp(-16px, -1vw, -10px);
+    padding-top: clamp(48px, calc(11vw - 12px), 117px);
 }
 
-#hero-title {
-    font-size: clamp(2.75rem, 8vw, 6.25rem);
+#judul-beranda {
+    font-size: clamp(2.625rem, 7.6vw, 6rem);
     letter-spacing: -0.045em;
 }
 
-.isi-beranda p {
+.deskripsi-beranda {
     max-width: 56ch;
 }
 
@@ -159,6 +174,7 @@ p {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
 /* Pembatas bagian dan Tentang Kami */
@@ -168,17 +184,17 @@ p {
     scroll-margin-top: 88px;
 }
 
-.card-tentangkami {
+.tentang-kami {
     display: grid;
     gap: clamp(20px, 4vw, 48px);
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
 }
 
-.isi-tentang {
+.isi-tentang-kami {
     max-width: 56ch;
 }
 
-.isi-tentang p:first-child {
+.isi-tentang-kami p:first-child {
     margin-top: 0;
 }
 
@@ -191,15 +207,22 @@ p {
 .daftar-menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-    gap: 16px;
+    gap: 15px;
     margin-top: 28px;
 }
 
-.menu {
+.kartu-menu {
     display: flex;
     border: 1px solid var(--garis);
     border-radius: 10px;
     background: var(--permukaan);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--teks) 16%, transparent);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.kartu-menu:hover {
+    box-shadow: 0 0 10px color-mix(in srgb, var(--teks) 37%, transparent);
+    transform: scale(1.05);
 }
 
 .isi-menu {
@@ -219,25 +242,45 @@ p {
     font-weight: 600;
 }
 
-.catatan {
-    color: var(--teks-redup);
-    font-size: 0.875rem;
-    margin-top: 20px;
+.harga-varian {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px 8px;
+    margin-bottom: 0;
 }
 
-/* Ajakan menjelajahi menu */
-.ajakan {
-    padding-block: clamp(44px, 8vw, 100px);
-    border-top: 1px solid var(--garis);
-    scroll-margin-top: 88px;
+.harga-varian dd {
+    margin: 0;
+    text-align: right;
 }
 
-/* Halaman menu: jarak kategori, lebar kartu, dan foto */
+/* Halaman menu */
 .katalog {
     padding-block: 132px 60px;
 }
 
-.katalog section {
+.judul-katalog {
+    font-size: clamp(2.125rem, 5.4vw, 3.75rem);
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+}
+
+.judul-katalog span {
+    color: var(--aksen);
+    font-weight: 600;
+}
+
+.judul-katalog::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 3px;
+    margin-top: 16px;
+    border-radius: 2px;
+    background-color: var(--aksen);
+}
+
+.kategori-menu {
     margin-top: 44px;
     padding-top: 20px;
     border-top: 1px solid var(--garis);
@@ -247,12 +290,12 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
 }
 
-.katalog .menu {
+.katalog .kartu-menu {
     flex-direction: column;
     overflow: hidden;
 }
 
-.foto-menu img {
+.foto-menu {
     display: block;
     width: 100%;
     height: auto;
@@ -271,7 +314,7 @@ footer {
     background: var(--permukaan);
 }
 
-footer > .wadah {
+.wadah-footer {
     width: min(1100px, calc(100% - 40px));
     margin-inline: auto;
 }
@@ -279,20 +322,18 @@ footer > .wadah {
 .isi-footer {
     display: grid;
     gap: clamp(20px, 4vw, 48px);
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.3fr);
 }
 
 .isi-footer p {
     max-width: 44ch;
 }
 
-.nama-restoran {
+.nama-cafe {
+    display: block;
+    color: inherit;
     font-weight: 700;
     letter-spacing: 0.12em;
-}
-
-.logo-footer {
-    color: inherit;
     text-decoration: none;
 }
 
@@ -303,14 +344,38 @@ footer > .wadah {
     margin-top: 8px;
 }
 
-.tautan-footer a {
+.tautan-footer a,
+.rincian-kontak a {
     color: inherit;
     text-decoration: none;
 }
 
-.tautan-footer a:hover {
+.tautan-footer a:hover,
+.rincian-kontak a[href]:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
+}
+
+.rincian-kontak {
+    display: grid;
+    gap: 8px;
+    margin-top: 8px;
+    color: var(--teks-redup);
+    font-size: 0.875rem;
+    font-style: normal;
+}
+
+.rincian-kontak a {
+    display: flex;
+    align-items: baseline;
+    justify-self: start;
+    gap: 8px;
+}
+
+.rincian-kontak i {
+    flex-shrink: 0;
+    color: var(--aksen);
+    font-size: 1rem;
 }
 
 .hak-cipta {
@@ -323,7 +388,7 @@ footer > .wadah {
 
 /* Tampilan ponsel */
 @media (max-width: 620px) {
-    .card-tentangkami,
+    .tentang-kami,
     .isi-footer {
         grid-template-columns: 1fr;
     }
