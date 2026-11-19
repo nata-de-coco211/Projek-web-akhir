@@ -142,6 +142,129 @@ p {
     background-color: var(--aksen);
     border-color: var(--aksen);
 }
+.filter-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.tombol-filter {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.tombol-filter[aria-pressed="true"] {
+    background: var(--teks);
+    color: var(--permukaan);
+}
+
+.jumlah-menu {
+    margin: 12px 0 0;
+    font-size: 0.875rem;
+}
+
+/* Kartu menu dan harga */
+.daftar-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.kartu-menu {
+    display: flex;
+    border: 1px solid var(--garis);
+    border-radius: 10px;
+    background: var(--permukaan);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--teks) 16%, transparent);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.kartu-menu:hover {
+    box-shadow: 0 0 10px color-mix(in srgb, var(--teks) 37%, transparent);
+    transform: scale(1.05);
+}
+
+.isi-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+}
+
+.isi-menu h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.harga {
+    margin-top: auto;
+    color: var(--aksen);
+    font-weight: 600;
+}
+
+.harga-varian {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px 8px;
+    margin-bottom: 0;
+}
+
+.harga-varian dd {
+    margin: 0;
+    text-align: right;
+}
+
+/* Halaman menu: jarak kategori, lebar kartu, dan foto */
+.katalog {
+    padding-block: 132px 60px;
+}
+
+.filter-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.tombol-filter {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.tombol-filter[aria-pressed="true"] {
+    background: var(--teks);
+    color: var(--permukaan);
+}
+
+.jumlah-menu {
+    margin: 12px 0 0;
+    font-size: 0.875rem;
+}
+
+.kategori-menu {
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 1px solid var(--garis);
+}
+
+.kategori-menu[hidden] {
+    display: none;
+}
+
+.katalog .daftar-menu {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tombol {
+        transition: none;
+    }
+
+    .tombol:is(:hover, :focus-visible, :active) {
+        transform: none;
+    }
+}
 
 @media (prefers-reduced-motion: reduce) {
     .tombol {
@@ -257,27 +380,6 @@ p {
 /* Halaman menu */
 .katalog {
     padding-block: 132px 60px;
-}
-
-.judul-katalog {
-    font-size: clamp(2.125rem, 5.4vw, 3.75rem);
-    letter-spacing: -0.045em;
-    text-wrap: balance;
-}
-
-.judul-katalog span {
-    color: var(--aksen);
-    font-weight: 600;
-}
-
-.judul-katalog::after {
-    content: "";
-    display: block;
-    width: 56px;
-    height: 3px;
-    margin-top: 16px;
-    border-radius: 2px;
-    background-color: var(--aksen);
 }
 
 .kategori-menu {
