@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* BERANDA */
 body{
@@ -69,7 +69,6 @@ main{
     max-width: 580px;
 }
 
-<<<<<<< Updated upstream
 /* TOMBOL BEST SELLER*/
 .best-seller {
     border-radius: 10px;
@@ -82,7 +81,7 @@ main{
 .best-seller:hover {
     background-color: #30251F;
     transform: scale(1.10);
-=======
+}
 .filter-menu {
     display: flex;
     flex-wrap: wrap;
@@ -105,8 +104,6 @@ main{
     font-size: 0.875rem;
 }
 
-<<<<<<< Updated upstream
-=======
 /* Kartu menu dan harga */
 .daftar-menu {
     display: grid;
@@ -185,7 +182,6 @@ main{
     font-size: 0.875rem;
 }
 
->>>>>>> Stashed changes
 .kategori-menu {
     margin-top: 44px;
     padding-top: 20px;
@@ -198,7 +194,6 @@ main{
 
 .katalog .daftar-menu {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
->>>>>>> Stashed changes
 }
 
 .best-seller a {
@@ -236,4 +231,3 @@ main{
 .kenali-kami:hover a {
     color: #F5EFE6;
 }
-
