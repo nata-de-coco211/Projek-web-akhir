@@ -226,6 +226,29 @@ p {
     font-weight: 600;
 }
 
+/* Dua pilihan harga dalam satu kartu menu */
+.harga-varian {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 4px 12px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    border-top: 1px solid var(--garis);
+}
+
+.harga-varian dt {
+    color: var(--teks-redup);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.harga-varian dd {
+    margin: 0;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
 .catatan {
     margin-top: 20px;
 }
