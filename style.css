@@ -1,13 +1,13 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* Dasar halaman dan tipografi */
 :root {
     --latar: #f5efe6;
-    --permukaan: #fbf7f0;
-    --teks: #30251f;
-    --teks-redup: #66564b;
-    --aksen: #785438;
-    --garis: #d8cabb;
+    --permukaan: #fffdf8;
+    --teks: #243638;
+    --teks-redup: #536667;
+    --aksen: #41676a;
+    --garis: color-mix(in srgb, var(--teks) 20%, var(--permukaan));
 }
 
 html {
@@ -62,15 +62,15 @@ p {
     width: min(max(40%, 340px), calc(100% - 24px));
     margin-inline: auto;
     padding: 8px clamp(10px, 2vw, 20px);
-    background: var(--latar);
+    background: var(--permukaan);
     border-radius: 50px;
-    box-shadow: 0 0 15px rgba(48, 37, 31, 0.15);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--teks) 15%, transparent);
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
 @media (hover: hover) {
     .navigasi:hover {
-        box-shadow: 0 0 15px rgba(48, 37, 31, 0.396);
+        box-shadow: 0 0 15px color-mix(in srgb, var(--teks) 40%, transparent);
         transform: scale(1.05);
     }
 }
@@ -134,7 +134,7 @@ p {
 .tombol:is(:hover, :focus-visible, :active) {
     background-color: var(--teks);
     color: var(--permukaan);
-    box-shadow: 0 5px 12px rgba(48, 37, 31, 0.24);
+    box-shadow: 0 5px 12px color-mix(in srgb, var(--teks) 24%, transparent);
     transform: scale(1.04);
 }
 
@@ -216,12 +216,12 @@ p {
     border: 1px solid var(--garis);
     border-radius: 10px;
     background: var(--permukaan);
-    box-shadow: 0 0 10px #30251f29;
+    box-shadow: 0 0 10px color-mix(in srgb, var(--teks) 16%, transparent);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .kartu-menu:hover {
-    box-shadow: 0 0 10px #30251f5f;
+    box-shadow: 0 0 10px color-mix(in srgb, var(--teks) 37%, transparent);
     transform: scale(1.05);
 }
 
