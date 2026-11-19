@@ -122,6 +122,8 @@ p {
     font-size: 0.875rem;
     font-weight: 600;
     text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+        background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .tombol-hitam {
@@ -129,29 +131,42 @@ p {
     color: var(--permukaan);
 }
 
-.tombol:hover {
-    background: var(--teks);
+.tombol:is(:hover, :focus-visible, :active) {
+    background-color: var(--teks);
     color: var(--permukaan);
+    box-shadow: 0 5px 12px rgba(48, 37, 31, 0.24);
+    transform: scale(1.04);
 }
 
-.tombol-hitam:hover {
-    background: var(--aksen);
+.tombol-hitam:is(:hover, :focus-visible, :active) {
+    background-color: var(--aksen);
     border-color: var(--aksen);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tombol {
+        transition: none;
+    }
+
+    .tombol:is(:hover, :focus-visible, :active) {
+        transform: none;
+    }
 }
 
 /* Pembuka beranda */
 .beranda {
     padding-block: clamp(44px, 8vw, 100px);
     margin-top: 92px;
-    padding-top: clamp(64px, 12vw, 145px);
+    margin-inline-start: clamp(-16px, -1vw, -10px);
+    padding-top: clamp(48px, calc(11vw - 12px), 117px);
 }
 
-#hero-title {
-    font-size: clamp(2.75rem, 8vw, 6.25rem);
+#judul-beranda {
+    font-size: clamp(2.625rem, 7.6vw, 6rem);
     letter-spacing: -0.045em;
 }
 
-.isi-beranda p {
+.deskripsi-beranda {
     max-width: 56ch;
 }
 
@@ -159,6 +174,7 @@ p {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
 /* Pembatas bagian dan Tentang Kami */
@@ -168,17 +184,17 @@ p {
     scroll-margin-top: 88px;
 }
 
-.card-tentangkami {
+.tentang-kami {
     display: grid;
     gap: clamp(20px, 4vw, 48px);
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
 }
 
-.isi-tentang {
+.isi-tentang-kami {
     max-width: 56ch;
 }
 
-.isi-tentang p:first-child {
+.isi-tentang-kami p:first-child {
     margin-top: 0;
 }
 
@@ -191,15 +207,22 @@ p {
 .daftar-menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-    gap: 16px;
+    gap: 15px;
     margin-top: 28px;
 }
 
-.menu {
+.kartu-menu {
     display: flex;
     border: 1px solid var(--garis);
     border-radius: 10px;
     background: var(--permukaan);
+    box-shadow: 0 0 10px #30251f29;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.kartu-menu:hover {
+    box-shadow: 0 0 10px #30251f5f;
+    transform: scale(1.05);
 }
 
 .isi-menu {
@@ -219,17 +242,16 @@ p {
     font-weight: 600;
 }
 
-.catatan {
-    color: var(--teks-redup);
-    font-size: 0.875rem;
-    margin-top: 20px;
+.harga-varian {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px 8px;
+    margin-bottom: 0;
 }
 
-/* Ajakan menjelajahi menu */
-.ajakan {
-    padding-block: clamp(44px, 8vw, 100px);
-    border-top: 1px solid var(--garis);
-    scroll-margin-top: 88px;
+.harga-varian dd {
+    margin: 0;
+    text-align: right;
 }
 
 /* Halaman menu: jarak kategori, lebar kartu, dan foto */
@@ -237,7 +259,7 @@ p {
     padding-block: 132px 60px;
 }
 
-.katalog section {
+.kategori-menu {
     margin-top: 44px;
     padding-top: 20px;
     border-top: 1px solid var(--garis);
@@ -247,12 +269,12 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
 }
 
-.katalog .menu {
+.katalog .kartu-menu {
     flex-direction: column;
     overflow: hidden;
 }
 
-.foto-menu img {
+.foto-menu {
     display: block;
     width: 100%;
     height: auto;
@@ -271,7 +293,7 @@ footer {
     background: var(--permukaan);
 }
 
-footer > .wadah {
+.wadah-footer {
     width: min(1100px, calc(100% - 40px));
     margin-inline: auto;
 }
@@ -286,13 +308,11 @@ footer > .wadah {
     max-width: 44ch;
 }
 
-.nama-restoran {
+.nama-cafe {
+    display: block;
+    color: inherit;
     font-weight: 700;
     letter-spacing: 0.12em;
-}
-
-.logo-footer {
-    color: inherit;
     text-decoration: none;
 }
 
@@ -323,7 +343,7 @@ footer > .wadah {
 
 /* Tampilan ponsel */
 @media (max-width: 620px) {
-    .card-tentangkami,
+    .tentang-kami,
     .isi-footer {
         grid-template-columns: 1fr;
     }
