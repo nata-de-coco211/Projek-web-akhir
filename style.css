@@ -69,6 +69,7 @@ main{
     max-width: 580px;
 }
 
+<<<<<<< Updated upstream
 /* TOMBOL BEST SELLER*/
 .best-seller {
     border-radius: 10px;
@@ -81,6 +82,42 @@ main{
 .best-seller:hover {
     background-color: #30251F;
     transform: scale(1.10);
+=======
+.filter-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.tombol-filter {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.tombol-filter[aria-pressed="true"] {
+    background: var(--teks);
+    color: var(--permukaan);
+}
+
+.jumlah-menu {
+    margin: 12px 0 0;
+    font-size: 0.875rem;
+}
+
+.kategori-menu {
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 1px solid var(--garis);
+}
+
+.kategori-menu[hidden] {
+    display: none;
+}
+
+.katalog .daftar-menu {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+>>>>>>> Stashed changes
 }
 
 .best-seller a {
