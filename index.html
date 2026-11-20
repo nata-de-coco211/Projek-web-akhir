@@ -80,16 +80,26 @@
           <div class="judul-kecil">Pilihan Favorit</div>
           <h2>Menu Best Seller</h2>
           <p>Beberapa menu favorit yang disediakan AKURASA.</p>
+          <div class="filter-menu" id="filter-menu" role="group" aria-label="Filter Best Seller"></div>
+          <p class="jumlah-menu" id="jumlah-menu" aria-live="polite"></p>
         </header>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <div class="isi-menu">
-              <h3>Ayam Bakar Spesial</h3>
-              <p>
-                Ayam berbumbu rempah, dibakar hingga harum, disajikan dengan
-                nasi hangat dan sambal.
-              </p>
-              <div class="harga">Rp45.000</div>
+        <div class="kategori-menu" id="minuman-favorit">
+          <h2>Minuman favorit</h2>
+          <div class="daftar-menu">
+            <div class="kartu-menu">
+              <img
+                class="foto-menu"
+                src="images/menu/aren-latte.jpg"
+                alt="Aren Latte"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="isi-menu">
+                <h3>Aren Latte</h3>
+                <p>Es latte dengan gula aren.</p>
+                <div class="harga">Rp33.000</div>
+              </div>
             </div>
           </article>
           <article class="kartu-menu">
@@ -113,7 +123,111 @@
             </div>
           </article>
         </div>
-      </section>
+        <div class="kategori-menu" id="bakery">
+          <h2>Roti dan camilan</h2>
+          <div class="daftar-menu">
+            <div class="kartu-menu">
+              <img class="foto-menu" src="images/menu/cinnamon-roll.jpg" alt="Cinnamon Roll" loading="lazy" width="420" height="300" />
+              <div class="isi-menu">
+                <h3>Cinnamon Roll</h3>
+                <p>Roti gulung dengan kayu manis.</p>
+                <div class="harga">Rp18.000</div>
+              </div>
+            </div>
+            <div class="kartu-menu">
+              <img class="foto-menu" src="images/menu/sosis-bun.jpg" alt="Sosis Bun" loading="lazy" width="420" height="300" />
+              <div class="isi-menu">
+                <h3>Sosis Bun</h3>
+                <p>Roti lembut dengan isian sosis.</p>
+                <div class="harga">Rp15.000</div>
+              </div>
+            </div>
+            <div class="kartu-menu">
+              <img class="foto-menu" src="images/menu/donat.jpg" alt="Donat" loading="lazy" width="420" height="300" />
+              <div class="isi-menu">
+                <h3>Donat</h3>
+                <p>Donat manis yang dibuat setiap hari dalam jumlah terbatas.</p>
+                <div class="harga">Rp10.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="kategori-menu" id="hidangan-utama">
+          <h2>Hidangan utama</h2>
+          <div class="daftar-menu">
+            <div class="kartu-menu">
+              <img
+                class="foto-menu"
+                src="images/menu/tipat-cantok.jpg"
+                alt="Tipat Cantok"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="isi-menu">
+                <h3>Tipat Cantok</h3>
+                <p>Tipat dengan telur, tahu, sayur, dan bumbu kacang.</p>
+                <div class="harga">Rp20.000</div>
+              </div>
+            </div>
+            <div class="kartu-menu">
+              <img
+                class="foto-menu"
+                src="images/menu/akurasa-pizza.jpg"
+                alt="Akurasa Pizza"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="isi-menu">
+                <h3>Pizza</h3>
+                <p>Pizza ayam dan jamur dengan paprika, bawang, cheddar, parmesan, dan mozzarella.</p>
+                <div class="harga">Rp65.000</div>
+              </div>
+            </div>
+            <div class="kartu-menu">
+              <img
+                class="foto-menu"
+                src="images/menu/mie-goreng.jpg"
+                alt="Mie Goreng"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="isi-menu">
+                <h3>Mie Goreng</h3>
+                <p>Mi goreng dengan pilihan seafood atau ayam.</p>
+                <dl class="harga harga-varian">
+                  <dt>Seafood</dt>
+                  <dd>Rp35.000</dd>
+                  <dt>Ayam</dt>
+                  <dd>Rp30.000</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="kartu-menu">
+              <img
+                class="foto-menu"
+                src="images/menu/nasi-goreng-suna-cekuh.jpg"
+                alt="Nasi Goreng Suna Cekuh"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="isi-menu">
+                <h3>Nasi Goreng Suna Cekuh</h3>
+                <p>Nasi goreng bumbu Bali dengan kerupuk, sate, sambal, dan acar.</p>
+                <dl class="harga harga-varian">
+                  <dt>Seafood</dt>
+                  <dd>Rp35.000</dd>
+                  <dt>Ayam</dt>
+                  <dd>Rp30.000</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section class="bagian">
         <div class="judul-kecil">Nikmati Momennya</div>
@@ -169,5 +283,6 @@
         <div class="hak-cipta">AKURASA</div>
       </div>
     </footer>
+    <script src="script.js" defer></script>
   </body>
 </html>
