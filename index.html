@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AKURASA | Berandaa</title>
+    <title>AKURASA | Beranda</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"
@@ -26,7 +26,7 @@
           <a href="index.html" aria-current="page">Beranda</a>
           <a href="menu.html"> Menu </a>
           <a href="galeri.html"> Galeri </a>
-          <a href="tentangkami.html"> Tentang Kami </a>
+          <a href="tentang-kami.html"> Tentang Kami </a>
         </nav>
       </div>
     </header>
@@ -68,14 +68,14 @@
             Kami ingin setiap kunjungan menjadi pengalaman yang menyenangkan —
             bukan hanya tentang makanan, tetapi juga tentang kebersamaan.
           </p>
-          <a href="kontak.html" class="tombol tombol-hitam">
+          <a href="#kontak-footer" class="tombol tombol-hitam">
             Hubungi Kami →
           </a>
         </div>
       </section>
 
       <!-- Menu best seller -->
-      <section class="bagian" id="best-seller">
+      <div class="bagian" id="best-seller">
         <header>
           <div class="judul-kecil">Pilihan Favorit</div>
           <h2>Menu Best Seller</h2>
@@ -101,27 +101,27 @@
                 <div class="harga">Rp33.000</div>
               </div>
             </div>
-          </article>
-          <article class="kartu-menu">
-            <div class="isi-menu">
-              <h3>Nasi Goreng Istimewa</h3>
-              <p>
-                Nasi goreng gurih dengan bumbu pilihan, telur, dan pelengkap
-                segar.
-              </p>
-              <div class="harga">Rp38.000</div>
+            <div class="kartu-menu">
+              <img
+                class="foto-menu"
+                src="images/menu/classic-matcha-latte.jpg"
+                alt="Classic Matcha Latte"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="isi-menu">
+                <h3>Classic Matcha Latte</h3>
+                <p>Matcha dengan susu.</p>
+                <dl class="harga harga-varian">
+                  <dt>Panas</dt>
+                  <dd>Rp25.000</dd>
+                  <dt>Es</dt>
+                  <dd>Rp27.000</dd>
+                </dl>
+              </div>
             </div>
-          </article>
-          <article class="kartu-menu">
-            <div class="isi-menu">
-              <h3>Es Tropis Segar</h3>
-              <p>
-                Minuman dingin bercita rasa buah tropis yang menyegarkan saat
-                bersantai.
-              </p>
-              <div class="harga">Rp25.000</div>
-            </div>
-          </article>
+          </div>
         </div>
         <div class="kategori-menu" id="bakery">
           <h2>Roti dan camilan</h2>
@@ -255,7 +255,7 @@
               <a href="index.html"> Beranda </a>
               <a href="menu.html"> Menu </a>
               <a href="galeri.html"> Galeri </a>
-              <a href="kontak.html"> Kontak </a>
+              <a href="#kontak-footer"> Kontak </a>
             </nav>
           </div>
           <section id="kontak-footer" aria-labelledby="judul-kontak-footer">
