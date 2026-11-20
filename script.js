@@ -1,4 +1,4 @@
-const katalog = document.querySelector(".katalog");
+const katalog = document.querySelector(".katalog, #best-seller");
 
 if (katalog) {
   const daftarKategori = Array.from(
@@ -7,6 +7,8 @@ if (katalog) {
   const tombolFilter = document.querySelector("#filter-menu");
   const informasiJumlah = document.querySelector("#jumlah-menu");
   const kategoriMakanan = new Set([
+    "bakery",
+    "hidangan-utama",
     "brunch",
     "rujak-dan-tipat",
     "menu-indonesia",
@@ -14,6 +16,7 @@ if (katalog) {
     "kids-snack",
   ]);
   const kategoriMinuman = new Set([
+    "minuman-favorit",
     "coffee",
     "signature-coffee",
     "chocolate-series",
@@ -88,7 +91,8 @@ if (katalog) {
 
     buatTombol("Semua", "semua", jumlahSemua);
 
-    ["makanan", "minuman", "lainnya"].forEach((jenis) => {
+    const jenisFilter = katalog.id === "best-seller" ? [] : ["makanan", "minuman", "lainnya"];
+    jenisFilter.forEach((jenis) => {
       const jumlah = jumlahKategori(jenis);
       if (jumlah > 0) {
         const nama = jenis.charAt(0).toUpperCase() + jenis.slice(1);
