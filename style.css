@@ -164,84 +164,6 @@ p {
     font-size: 0.875rem;
 }
 
-/* Kartu menu dan harga */
-.daftar-menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-    gap: 15px;
-    margin-top: 28px;
-}
-
-.kartu-menu {
-    display: flex;
-    border: 1px solid var(--garis);
-    border-radius: 10px;
-    background: var(--permukaan);
-    box-shadow: 0 0 10px color-mix(in srgb, var(--teks) 16%, transparent);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.kartu-menu:hover {
-    box-shadow: 0 0 10px color-mix(in srgb, var(--teks) 37%, transparent);
-    transform: scale(1.05);
-}
-
-.isi-menu {
-    display: flex;
-    flex-direction: column;
-    padding: 22px;
-}
-
-.isi-menu h3 {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.harga {
-    margin-top: auto;
-    color: var(--aksen);
-    font-weight: 600;
-}
-
-.harga-varian {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 4px 8px;
-    margin-bottom: 0;
-}
-
-.harga-varian dd {
-    margin: 0;
-    text-align: right;
-}
-
-/* Halaman menu: jarak kategori, lebar kartu, dan foto */
-.katalog {
-    padding-block: 132px 60px;
-}
-
-.filter-menu {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 24px;
-}
-
-.tombol-filter {
-    cursor: pointer;
-    font-family: inherit;
-}
-
-.tombol-filter[aria-pressed="true"] {
-    background: var(--teks);
-    color: var(--permukaan);
-}
-
-.jumlah-menu {
-    margin: 12px 0 0;
-    font-size: 0.875rem;
-}
-
 .kategori-menu {
     margin-top: 44px;
     padding-top: 20px;
@@ -252,18 +174,9 @@ p {
     display: none;
 }
 
-.katalog .daftar-menu {
+.katalog .daftar-menu,
+#best-seller .daftar-menu {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .tombol {
-        transition: none;
-    }
-
-    .tombol:is(:hover, :focus-visible, :active) {
-        transform: none;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -388,11 +301,13 @@ p {
     border-top: 1px solid var(--garis);
 }
 
-.katalog .daftar-menu {
+.katalog .daftar-menu,
+#best-seller .daftar-menu {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
 }
 
-.katalog .kartu-menu {
+.katalog .kartu-menu,
+#best-seller .kartu-menu {
     flex-direction: column;
     overflow: hidden;
 }
@@ -405,7 +320,8 @@ p {
     object-fit: cover;
 }
 
-.katalog .isi-menu {
+.katalog .isi-menu,
+#best-seller .isi-menu {
     flex: 1;
 }
 
@@ -493,5 +409,88 @@ footer {
     .tentang-kami,
     .isi-footer {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Halaman Tentang Kami */
+.halaman-cerita {
+    padding: 144px 0 64px;
+}
+
+.cerita-utama {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.cerita-utama h1 {
+    font-size: 3.5rem;
+}
+
+.cerita-utama .tombol {
+    margin-top: 12px;
+}
+
+.foto-cerita {
+    position: relative;
+}
+
+.foto-cerita img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.foto-cerita p {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    margin: 0;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background: var(--permukaan);
+    color: var(--teks);
+}
+
+.detail-cerita {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--garis);
+}
+
+.detail-cerita h2 {
+    font-size: 2rem;
+}
+
+.info-kunjungan {
+    padding: 20px 28px;
+    border-radius: 12px;
+    background: var(--permukaan);
+}
+
+@media (max-width: 760px) {
+    .halaman-cerita {
+        padding: 140px 0 40px;
+    }
+
+    .cerita-utama {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .cerita-utama h1 {
+        font-size: 2.5rem;
+    }
+
+    .detail-cerita {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 28px;
     }
 }
