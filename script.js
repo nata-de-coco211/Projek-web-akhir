@@ -59,9 +59,10 @@ if (katalog) {
     function buatTombol(nama, filter, jumlah) {
       const tombol = document.createElement("button");
       tombol.type = "button";
-      tombol.className = "tombol tombol-filter";
+      tombol.className = "btn btn-outline-dark";
       tombol.dataset.filter = filter;
       tombol.textContent = `${nama} (${jumlah})`;
+      tombol.classList.toggle("active", filter === "semua");
       tombol.setAttribute("aria-pressed", String(filter === "semua"));
       tombol.addEventListener("click", () => {
         kategori.forEach((item) => {
@@ -72,10 +73,9 @@ if (katalog) {
         });
 
         tombolFilter.querySelectorAll("button").forEach((item) => {
-          item.setAttribute(
-            "aria-pressed",
-            String(item.dataset.filter === filter),
-          );
+          const aktif = item.dataset.filter === filter;
+          item.classList.toggle("active", aktif);
+          item.setAttribute("aria-pressed", String(aktif));
         });
 
         const jumlahTampil =
