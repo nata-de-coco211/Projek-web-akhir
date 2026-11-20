@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-function scip() {
-    
-}
-=======
 const katalog = document.querySelector(".katalog, #best-seller");
 
 if (katalog) {
@@ -112,4 +107,3 @@ if (katalog) {
     informasiJumlah.textContent = `Menampilkan ${jumlahSemua} menu.`;
   }
 }
->>>>>>> Stashed changes
