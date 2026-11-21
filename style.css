@@ -197,6 +197,45 @@ p {
     font-size: 1rem;
 }
 
+.baris-harga-favorit {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.baris-harga-favorit .harga {
+    flex: 1;
+    min-width: 0;
+    margin-top: 0;
+}
+
+.tombol-favorit {
+    flex: none;
+    padding: 0 4px;
+    border: 0;
+    background: transparent;
+    color: var(--teks-redup);
+    font: inherit;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.tombol-favorit[aria-pressed="true"] {
+    color: #d62828;
+}
+
+.tombol-favorit:hover {
+    transform: scale(1.15);
+}
+
+.tombol-favorit:focus-visible {
+    outline: 2px solid var(--aksen);
+    outline-offset: 3px;
+}
+
 .harga {
     margin-top: auto;
     color: var(--aksen);

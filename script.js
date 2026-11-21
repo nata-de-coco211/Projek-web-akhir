@@ -1,3 +1,46 @@
+document.querySelectorAll(".kartu-menu").forEach((kartu) => {
+  const judul = kartu.querySelector(".isi-menu h3");
+  const isi = kartu.querySelector(".isi-menu");
+  const harga = isi && isi.querySelector(".harga");
+  if (!judul || !isi || !harga) {
+    return;
+  }
+
+  const namaMenu = judul.textContent.trim();
+  const kunciFavorit = `akurasa-favorit:${namaMenu.toLowerCase()}`;
+  const tombolFavorit = document.createElement("button");
+  tombolFavorit.type = "button";
+  tombolFavorit.className = "tombol-favorit";
+  tombolFavorit.setAttribute("aria-pressed", "false");
+
+  function perbaruiTombol(isFavorit) {
+    tombolFavorit.textContent = isFavorit ? "♥" : "♡";
+    tombolFavorit.setAttribute("aria-pressed", String(isFavorit));
+    tombolFavorit.setAttribute(
+      "aria-label",
+      `${isFavorit ? "Hapus" : "Tambahkan"} ${namaMenu} ${
+        isFavorit ? "dari" : "ke"
+      } favorit`,
+    );
+  }
+
+  const isFavorit = localStorage.getItem(kunciFavorit) === "true";
+  perbaruiTombol(isFavorit);
+  tombolFavorit.addEventListener("click", () => {
+    const favoritBaru = tombolFavorit.getAttribute("aria-pressed") !== "true";
+    if (favoritBaru) {
+      localStorage.setItem(kunciFavorit, "true");
+    } else {
+      localStorage.removeItem(kunciFavorit);
+    }
+    perbaruiTombol(favoritBaru);
+  });
+  const barisHarga = document.createElement("div");
+  barisHarga.className = "baris-harga-favorit";
+  harga.parentNode.insertBefore(barisHarga, harga);
+  barisHarga.append(harga, tombolFavorit);
+});
+
 const katalog = document.querySelector(".katalog");
 
 if (katalog) {
