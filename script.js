@@ -103,3 +103,16 @@ if (katalog) {
     informasiJumlah.textContent = `Menampilkan ${jumlahSemua} menu.`;
   }
 }
+
+
+let jamSekarang = new Date().getHours();
+
+if (jamSekarang >= 9 && jamSekarang < 23) {
+  document.getElementById("statustoko").textContent = 'Buka';
+  document.getElementById("statustoko").style.color = 'green';
+}
+else {
+  document.getElementById("statustoko").textContent = 'Tutup';
+  document.getElementById("statustoko").style.color = 'red';
+}
+
