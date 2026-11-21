@@ -1,5 +1,34 @@
 const katalog = document.querySelector(".katalog, #best-seller");
 
+document.querySelectorAll(".kartu-menu").forEach((kartu) => {
+  const isiKartu = kartu.querySelector(".card-body");
+  const harga = isiKartu?.querySelector(".mt-auto.fw-semibold.text-primary");
+
+  if (!harga) return;
+
+  const barisHarga = document.createElement("div");
+  barisHarga.className = "baris-harga-love";
+
+  const tombolLove = document.createElement("button");
+  tombolLove.type = "button";
+  tombolLove.className = "tombol-love";
+  tombolLove.setAttribute("aria-label", "Sukai menu");
+  tombolLove.setAttribute("aria-pressed", "false");
+  tombolLove.innerHTML = '<i class="fa-regular fa-heart" aria-hidden="true"></i>';
+
+  tombolLove.addEventListener("click", () => {
+    const aktif = tombolLove.classList.toggle("aktif");
+    tombolLove.setAttribute("aria-pressed", String(aktif));
+    tombolLove.setAttribute("aria-label", aktif ? "Batalkan suka menu" : "Sukai menu");
+    tombolLove.innerHTML = aktif
+      ? '<i class="fa-solid fa-heart" aria-hidden="true"></i>'
+      : '<i class="fa-regular fa-heart" aria-hidden="true"></i>';
+  });
+
+  harga.before(barisHarga);
+  barisHarga.append(harga, tombolLove);
+});
+
 if (katalog) {
   const daftarKategori = Array.from(
     katalog.querySelectorAll(".kategori-menu"),
