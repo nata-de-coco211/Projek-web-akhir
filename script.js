@@ -136,3 +136,12 @@ if (katalog) {
     informasiJumlah.textContent = `Menampilkan ${jumlahSemua} menu.`;
   }
 }
+
+
+const statusToko = document.getElementById("statustoko");
+if (statusToko) {
+  const jamSekarang = new Date().getHours();
+  const sedangBuka = jamSekarang >= 9 && jamSekarang < 23;
+  statusToko.textContent = sedangBuka ? "Buka" : "Tutup";
+  statusToko.style.color = sedangBuka ? "green" : "red";
+}
