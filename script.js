@@ -137,11 +137,12 @@ if (katalog) {
   }
 }
 
+let jamsekarang = new Date().getHours();
 
-const statusToko = document.getElementById("statustoko");
-if (statusToko) {
-  const jamSekarang = new Date().getHours();
-  const sedangBuka = jamSekarang >= 9 && jamSekarang < 23;
-  statusToko.textContent = sedangBuka ? "Buka" : "Tutup";
-  statusToko.style.color = sedangBuka ? "green" : "red";
+if (jamsekarang >= 9 && jamsekarang <= 23) {
+  document.getElementById("statustoko").textContent = "Buka";
+  document.getElementById("statustoko").style.color = "green";
+} else {
+  document.getElementById("statustoko").textContent = "Tutup";
+  document.getElementById("statustoko").style.color = "red";
 }
