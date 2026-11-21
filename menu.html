@@ -4,1612 +4,1975 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AKURASA | Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+      integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="navigasi">
-      <div class="isi-navigasi">
-        <a href="index.html" aria-label="AKURASA Beranda">
-          <img
-            class="gambar-logo"
-            src="images/logo.png"
-            alt="Logo AKURASA"
-            width="56"
-            height="56"
-          />
+    <header class="navbar navbar-expand-md fixed-top navigasi mx-auto rounded-pill bg-body-tertiary py-2 px-2 px-md-3">
+      <div class="container-fluid px-2">
+        <a class="navbar-brand p-0 me-2" href="index.html" aria-label="AKURASA Beranda">
+          <img class="d-block" src="images/logo.png" alt="Logo AKURASA" width="56" height="56" />
         </a>
-        <nav class="daftar-navigasi" aria-label="Navigasi utama">
-          <a href="index.html"> Beranda </a>
-          <a href="menu.html" aria-current="page"> Menu </a>
-          <a href="galeri.html"> Galeri </a>
-          <a href="kontak.html"> Kontak </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigasi-utama"
+          aria-controls="navigasi-utama"
+          aria-expanded="false"
+          aria-label="Buka atau tutup menu navigasi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="collapse navbar-collapse" id="navigasi-utama" aria-label="Navigasi utama">
+          <div class="navbar-nav ms-md-auto gap-md-2 py-2 py-md-0 small">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="nav-link active" href="menu.html" aria-current="page">Menu</a>
+            <a class="nav-link" href="galeri.html">Galeri</a>
+            <a class="nav-link" href="tentang-kami.html">Tentang Kami</a>
+          </div>
         </nav>
       </div>
     </header>
 
     <!-- Katalog menu -->
-    <main class="katalog">
-      <h1>Menu AKURASA</h1>
-      <p>Sebagian gambar menu merupakan ilustrasi penyajian.</p>
+    <main class="container wadah-halaman halaman-dalam katalog pb-5">
+      <h1 class="display-5 fw-medium">Menu AKURASA</h1>
+      <p class="text-body-secondary">Sebagian gambar menu merupakan ilustrasi penyajian.</p>
       <div
-        class="filter-menu"
+        class="d-flex flex-wrap gap-2 mt-4"
         id="filter-menu"
         role="group"
         aria-label="Filter menu berdasarkan kategori"
       ></div>
-      <p class="jumlah-menu" id="jumlah-menu" aria-live="polite"></p>
+      <p class="small text-body-secondary mt-3 mb-0" id="jumlah-menu" aria-live="polite"></p>
 
-      <section class="kategori-menu" id="brunch">
+      <div class="kategori-menu border-top mt-5 pt-3" id="bakery">
+        <h2>Bakery</h2>
+        <p class="text-body-secondary">Pilihan etalase dibuat segar setiap hari. Stok dapat berubah setiap hari.</p>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img class="card-img-top foto-menu object-fit-cover" src="images/menu/pisang-coklat.jpg" alt="Pisang Coklat" loading="lazy" width="420" height="300" />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Pisang Coklat</h3>
+                <p class="card-text text-body-secondary">Pisang dengan isian cokelat.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp5.000</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img class="card-img-top foto-menu object-fit-cover" src="images/menu/banoffee-bread.jpg" alt="Banoffee Bread" loading="lazy" width="420" height="300" />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Banoffee Bread</h3>
+                <p class="card-text text-body-secondary">Roti manis dengan pisang dan karamel.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp8.000</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img class="card-img-top foto-menu object-fit-cover" src="images/menu/coffee-bun.jpg" alt="Coffee Bun" loading="lazy" width="420" height="300" />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Coffee Bun</h3>
+                <p class="card-text text-body-secondary">Roti bulat dengan lapisan kopi di atasnya.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp15.000</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img class="card-img-top foto-menu object-fit-cover" src="images/menu/brownies.jpg" alt="Brownies" loading="lazy" width="420" height="300" />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Brownies</h3>
+                <p class="card-text text-body-secondary">Potongan brownies cokelat.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp22.000</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img class="card-img-top foto-menu object-fit-cover" src="images/menu/croissant.jpg" alt="Croissant" loading="lazy" width="420" height="300" />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Croissant</h3>
+                <p class="card-text text-body-secondary">Pastri berlapis dengan tekstur renyah. Stok harian terbatas.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp18.000</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img class="card-img-top foto-menu object-fit-cover" src="images/menu/donat.jpg" alt="Donat" loading="lazy" width="420" height="300" />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Donat</h3>
+                <p class="card-text text-body-secondary">Donat manis yang dibuat setiap hari dalam jumlah terbatas.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp10.000</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img class="card-img-top foto-menu object-fit-cover" src="images/menu/cinnamon-roll.jpg" alt="Cinnamon Roll" loading="lazy" width="420" height="300" />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Cinnamon Roll</h3>
+                <p class="card-text text-body-secondary">Roti gulung dengan kayu manis.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp18.000</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img class="card-img-top foto-menu object-fit-cover" src="images/menu/sosis-bun.jpg" alt="Sosis Bun" loading="lazy" width="420" height="300" />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Sosis Bun</h3>
+                <p class="card-text text-body-secondary">Roti lembut dengan isian sosis.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp15.000</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="kategori-menu border-top mt-5 pt-3" id="brunch">
         <h2>Brunch</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/egg-avocado-on-toast.jpg"
-              alt="Egg Avocado on Toast"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Egg Avocado on Toast</h3>
-              <p>Roti panggang dengan alpukat dan telur.</p>
-              <div class="harga">Rp65.000</div>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/egg-avocado-on-toast.jpg"
+                alt="Egg Avocado on Toast"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Egg Avocado on Toast</h3>
+                <p class="card-text text-body-secondary">Roti panggang dengan alpukat dan telur.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp65.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/scramble-on-toast.jpg"
-              alt="Scramble on Toast"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Scramble on Toast</h3>
-              <p>Roti panggang dengan telur orak-arik.</p>
-              <div class="harga">Rp60.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/scramble-on-toast.jpg"
+                alt="Scramble on Toast"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Scramble on Toast</h3>
+                <p class="card-text text-body-secondary">Roti panggang dengan telur orak-arik.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp60.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/crispy-chicken-burger.jpg"
-              alt="Crispy Chicken Burger"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Crispy Chicken Burger</h3>
-              <p>Dada ayam renyah, selada, tomat, dan cheddar dengan kentang goreng.</p>
-              <div class="harga">Rp60.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/crispy-chicken-burger.jpg"
+                alt="Crispy Chicken Burger"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Crispy Chicken Burger</h3>
+                <p class="card-text text-body-secondary">Dada ayam renyah, selada, tomat, dan cheddar dengan kentang goreng.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp60.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/double-cheese-sandwich.jpg"
-              alt="Double Cheese Sandwich"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Double Cheese Sandwich</h3>
-              <p>Sourdough panggang dengan garlic butter, mozzarella, cheddar, dan kentang goreng.</p>
-              <div class="harga">Rp60.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/double-cheese-sandwich.jpg"
+                alt="Double Cheese Sandwich"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Double Cheese Sandwich</h3>
+                <p class="card-text text-body-secondary">Sourdough panggang dengan garlic butter, mozzarella, cheddar, dan kentang goreng.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp60.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="rujak-dan-tipat">
+      <div class="kategori-menu border-top mt-5 pt-3" id="rujak-dan-tipat">
         <h2>Rujak dan Tipat</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/rujak-bulung-kuah-pindang.jpg"
-              alt="Rujak Bulung Kuah Pindang"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Rujak Bulung Kuah Pindang</h3>
-              <p>Rumput laut dengan kuah pindang khas Bali.</p>
-              <div class="harga">Rp22.000</div>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/rujak-bulung-kuah-pindang.jpg"
+                alt="Rujak Bulung Kuah Pindang"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Rujak Bulung Kuah Pindang</h3>
+                <p class="card-text text-body-secondary">Rumput laut dengan kuah pindang khas Bali.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp22.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/rujak-kuah-pindang.jpg"
-              alt="Rujak Kuah Pindang"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Rujak Kuah Pindang</h3>
-              <p>Campuran buah segar dengan kuah pindang pedas.</p>
-              <div class="harga">Rp30.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/rujak-kuah-pindang.jpg"
+                alt="Rujak Kuah Pindang"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Rujak Kuah Pindang</h3>
+                <p class="card-text text-body-secondary">Campuran buah segar dengan kuah pindang pedas.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp30.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/rujak-colek-gula.jpg"
-              alt="Rujak Colek Gula"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Rujak Colek Gula</h3>
-              <p>Potongan buah segar dengan cocolan gula.</p>
-              <div class="harga">Rp17.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/rujak-colek-gula.jpg"
+                alt="Rujak Colek Gula"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Rujak Colek Gula</h3>
+                <p class="card-text text-body-secondary">Potongan buah segar dengan cocolan gula.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp17.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/rujak-cuka-gula.jpg"
-              alt="Rujak Cuka Gula"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Rujak Cuka Gula</h3>
-              <p>Buah segar dengan kuah asam manis.</p>
-              <div class="harga">Rp17.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/rujak-cuka-gula.jpg"
+                alt="Rujak Cuka Gula"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Rujak Cuka Gula</h3>
+                <p class="card-text text-body-secondary">Buah segar dengan kuah asam manis.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp17.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/tipat-cantok.jpg"
-              alt="Tipat Cantok"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Tipat Cantok</h3>
-              <p>Tipat dengan telur, tahu, sayur, dan bumbu kacang.</p>
-              <div class="harga">Rp20.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/tipat-cantok.jpg"
+                alt="Tipat Cantok"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Tipat Cantok</h3>
+                <p class="card-text text-body-secondary">Tipat dengan telur, tahu, sayur, dan bumbu kacang.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp20.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/tipat-srombotan.jpg"
-              alt="Tipat Srombotan"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Tipat Srombotan</h3>
-              <p>Tipat, sayuran, tahu, kacang, sambal nyuh, dan kaples.</p>
-              <div class="harga">Rp25.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/tipat-srombotan.jpg"
+                alt="Tipat Srombotan"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Tipat Srombotan</h3>
+                <p class="card-text text-body-secondary">Tipat, sayuran, tahu, kacang, sambal nyuh, dan kaples.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp25.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/tipat-plecing.jpg"
-              alt="Tipat Plecing"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Tipat Plecing</h3>
-              <p>Tipat berbumbu plecing dengan tahu, telur, dan kacang tanah.</p>
-              <div class="harga">Rp25.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/tipat-plecing.jpg"
+                alt="Tipat Plecing"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Tipat Plecing</h3>
+                <p class="card-text text-body-secondary">Tipat berbumbu plecing dengan tahu, telur, dan kacang tanah.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp25.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/tipat-kuah-ayam-kare.jpg"
-              alt="Tipat Kuah Ayam Kare"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Tipat Kuah Ayam Kare</h3>
-              <p>Tipat kuah kare dengan sayuran, telur, kerupuk, dan kacang.</p>
-              <div class="harga">Rp27.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/tipat-kuah-ayam-kare.jpg"
+                alt="Tipat Kuah Ayam Kare"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Tipat Kuah Ayam Kare</h3>
+                <p class="card-text text-body-secondary">Tipat kuah kare dengan sayuran, telur, kerupuk, dan kacang.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp27.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="menu-indonesia">
+      <div class="kategori-menu border-top mt-5 pt-3" id="menu-indonesia">
         <h2>Menu Indonesia</h2>
-        <p>Pilihan sambal: tempong, ijo, dan matah.</p>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/mujair-nyat-nyat.jpg"
-              alt="Mujair Nyat-Nyat"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Mujair Nyat-Nyat</h3>
-              <p>Mujair berbumbu Bali dengan nasi, plecing, kacang, dan sambal.</p>
-              <div class="harga">Rp39.000</div>
-            </div>
-          </article>
+        <p class="text-body-secondary">Pilihan sambal: tempong, ijo, dan matah.</p>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/mujair-nyat-nyat.jpg"
+                alt="Mujair Nyat-Nyat"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Mujair Nyat-Nyat</h3>
+                <p class="card-text text-body-secondary">Mujair berbumbu Bali dengan nasi, plecing, kacang, dan sambal.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp39.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/mujair-bakar.jpg"
-              alt="Mujair Bakar"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Mujair Bakar</h3>
-              <p>Ikan mujair bakar dengan nasi, plecing, kacang, dan sambal.</p>
-              <div class="harga">Rp37.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/mujair-bakar.jpg"
+                alt="Mujair Bakar"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Mujair Bakar</h3>
+                <p class="card-text text-body-secondary">Ikan mujair bakar dengan nasi, plecing, kacang, dan sambal.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp37.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/nasi-goreng-suna-cekuh.jpg"
-              alt="Nasi Goreng Suna Cekuh"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Nasi Goreng Suna Cekuh</h3>
-              <p>Nasi goreng bumbu Bali dengan kerupuk, sate, sambal, dan acar.</p>
-              <dl class="harga harga-varian">
-                <dt>Seafood</dt>
-                <dd>Rp35.000</dd>
-                <dt>Ayam</dt>
-                <dd>Rp30.000</dd>
-              </dl>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/nasi-goreng-suna-cekuh.jpg"
+                alt="Nasi Goreng Suna Cekuh"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Nasi Goreng Suna Cekuh</h3>
+                <p class="card-text text-body-secondary">Nasi goreng bumbu Bali dengan kerupuk, sate, sambal, dan acar.</p>
+                <dl class="d-flex flex-column gap-1 mt-auto mb-0 fw-semibold text-primary">
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Seafood</dt>
+                    <dd class="mb-0 text-end">Rp35.000</dd>
+                  </div>
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Ayam</dt>
+                    <dd class="mb-0 text-end">Rp30.000</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/nasi-goreng-cabe-ijo.jpg"
-              alt="Nasi Goreng Cabe Ijo"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Nasi Goreng Cabe Ijo</h3>
-              <p>Nasi goreng cabai hijau dengan kerupuk, sate, sambal ijo, dan acar.</p>
-              <div class="harga">Rp30.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/nasi-goreng-cabe-ijo.jpg"
+                alt="Nasi Goreng Cabe Ijo"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Nasi Goreng Cabe Ijo</h3>
+                <p class="card-text text-body-secondary">Nasi goreng cabai hijau dengan kerupuk, sate, sambal ijo, dan acar.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp30.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/ayam-bakar.jpg"
-              alt="Ayam Bakar"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Ayam Bakar</h3>
-              <p>Ayam bakar dengan nasi, plecing, kacang, dan sambal.</p>
-              <div class="harga">Rp30.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/ayam-bakar.jpg"
+                alt="Ayam Bakar"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Ayam Bakar</h3>
+                <p class="card-text text-body-secondary">Ayam bakar dengan nasi, plecing, kacang, dan sambal.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp30.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/ayam-goreng.jpg"
-              alt="Ayam Goreng"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Ayam Goreng</h3>
-              <p>Ayam goreng dengan nasi, plecing, kacang, dan sambal.</p>
-              <div class="harga">Rp27.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/ayam-goreng.jpg"
+                alt="Ayam Goreng"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Ayam Goreng</h3>
+                <p class="card-text text-body-secondary">Ayam goreng dengan nasi, plecing, kacang, dan sambal.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp27.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/mie-goreng.jpg"
-              alt="Mie Goreng"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Mie Goreng</h3>
-              <p>Mi goreng dengan pilihan seafood atau ayam.</p>
-              <dl class="harga harga-varian">
-                <dt>Seafood</dt>
-                <dd>Rp35.000</dd>
-                <dt>Ayam</dt>
-                <dd>Rp30.000</dd>
-              </dl>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/mie-goreng.jpg"
+                alt="Mie Goreng"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Mie Goreng</h3>
+                <p class="card-text text-body-secondary">Mi goreng dengan pilihan seafood atau ayam.</p>
+                <dl class="d-flex flex-column gap-1 mt-auto mb-0 fw-semibold text-primary">
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Seafood</dt>
+                    <dd class="mb-0 text-end">Rp35.000</dd>
+                  </div>
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Ayam</dt>
+                    <dd class="mb-0 text-end">Rp30.000</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="pizza-pasta">
+      <div class="kategori-menu border-top mt-5 pt-3" id="pizza-pasta">
         <h2>Pizza &amp; Pasta</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/carbonara.jpg"
-              alt="Carbonara"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Carbonara</h3>
-              <p>Pasta dengan saus carbonara yang lembut.</p>
-              <div class="harga">Rp55.000</div>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/carbonara.jpg"
+                alt="Carbonara"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Carbonara</h3>
+                <p class="card-text text-body-secondary">Pasta dengan saus carbonara yang lembut.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp55.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/bolognese.jpg"
-              alt="Bolognese"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Bolognese</h3>
-              <p>Pasta dengan saus tomat dan daging.</p>
-              <div class="harga">Rp60.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/bolognese.jpg"
+                alt="Bolognese"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Bolognese</h3>
+                <p class="card-text text-body-secondary">Pasta dengan saus tomat dan daging.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp60.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/akurasa-pizza.jpg"
-              alt="Akurasa Pizza"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Akurasa Pizza</h3>
-              <p>Pizza ayam dan jamur dengan paprika, bawang, cheddar, parmesan, dan mozzarella.</p>
-              <div class="harga">Rp65.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/akurasa-pizza.jpg"
+                alt="Akurasa Pizza"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Akurasa Pizza</h3>
+                <p class="card-text text-body-secondary">Pizza ayam dan jamur dengan paprika, bawang, cheddar, parmesan, dan mozzarella.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp65.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/smoked-beef-pizza.jpg"
-              alt="Smoked Beef Pizza"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Smoked Beef Pizza</h3>
-              <p>Pizza daging asap dengan tomat, paprika, bawang putih, mozzarella, dan parmesan.</p>
-              <div class="harga">Rp70.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/smoked-beef-pizza.jpg"
+                alt="Smoked Beef Pizza"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Smoked Beef Pizza</h3>
+                <p class="card-text text-body-secondary">Pizza daging asap dengan tomat, paprika, bawang putih, mozzarella, dan parmesan.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp70.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="kids-snack">
+      <div class="kategori-menu border-top mt-5 pt-3" id="kids-snack">
         <h2>Kids &amp; Snack</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/grill-chicken-wings.jpg"
-              alt="Grill Chicken Wings"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Grill Chicken Wings</h3>
-              <p>Sayap ayam panggang.</p>
-              <div class="harga">Rp25.000</div>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/grill-chicken-wings.jpg"
+                alt="Grill Chicken Wings"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Grill Chicken Wings</h3>
+                <p class="card-text text-body-secondary">Sayap ayam panggang.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp25.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/french-fries.jpg"
-              alt="French Fries"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>French Fries</h3>
-              <p>Kentang potong goreng.</p>
-              <div class="harga">Rp20.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/french-fries.jpg"
+                alt="French Fries"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">French Fries</h3>
+                <p class="card-text text-body-secondary">Kentang potong goreng.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp20.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/snack-plater.jpg"
-              alt="Snack Plater"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Snack Plater</h3>
-              <p>Sepiring sosis, nugget, dan kentang goreng.</p>
-              <div class="harga">Rp23.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/snack-plater.jpg"
+                alt="Snack Plater"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Snack Plater</h3>
+                <p class="card-text text-body-secondary">Sepiring sosis, nugget, dan kentang goreng.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp23.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="coffee">
+      <div class="kategori-menu border-top mt-5 pt-3" id="coffee">
         <h2>Coffee</h2>
-        <p>Tambahan sirup Rp5.000 atau espresso Rp10.000. Susu segar termasuk harga. Susu oat +Rp10.000 atau susu kelapa +Rp5.000.</p>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/espresso.jpg"
-              alt="Espresso"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Espresso</h3>
-              <p>Kopi pekat dalam cangkir kecil.</p>
-              <div class="harga">Panas Rp20.000</div>
-            </div>
-          </article>
+        <p class="text-body-secondary">Tambahan sirup Rp5.000 atau espresso Rp10.000. Susu segar termasuk harga. Susu oat +Rp10.000 atau susu kelapa +Rp5.000.</p>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/espresso.jpg"
+                alt="Espresso"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Espresso</h3>
+                <p class="card-text text-body-secondary">Kopi pekat dalam cangkir kecil.</p>
+                <div class="mt-auto fw-semibold text-primary">Panas Rp20.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/macchiato.jpg"
-              alt="Macchiato"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Macchiato</h3>
-              <p>Espresso dengan sedikit busa susu.</p>
-              <div class="harga">Panas Rp22.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/macchiato.jpg"
+                alt="Macchiato"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Macchiato</h3>
+                <p class="card-text text-body-secondary">Espresso dengan sedikit busa susu.</p>
+                <div class="mt-auto fw-semibold text-primary">Panas Rp22.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/americano.jpg"
-              alt="Americano"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Americano</h3>
-              <p>Espresso dengan tambahan air.</p>
-              <dl class="harga harga-varian">
-                <dt>Panas</dt>
-                <dd>Rp25.000</dd>
-                <dt>Es</dt>
-                <dd>Rp28.000</dd>
-              </dl>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/americano.jpg"
+                alt="Americano"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Americano</h3>
+                <p class="card-text text-body-secondary">Espresso dengan tambahan air.</p>
+                <dl class="d-flex flex-column gap-1 mt-auto mb-0 fw-semibold text-primary">
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Panas</dt>
+                    <dd class="mb-0 text-end">Rp25.000</dd>
+                  </div>
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Es</dt>
+                    <dd class="mb-0 text-end">Rp28.000</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/cappuccino.jpg"
-              alt="Cappuccino"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Cappuccino</h3>
-              <p>Espresso dengan susu dan busa lembut.</p>
-              <dl class="harga harga-varian">
-                <dt>Panas</dt>
-                <dd>Rp27.000</dd>
-                <dt>Es</dt>
-                <dd>Rp30.000</dd>
-              </dl>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/cappuccino.jpg"
+                alt="Cappuccino"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Cappuccino</h3>
+                <p class="card-text text-body-secondary">Espresso dengan susu dan busa lembut.</p>
+                <dl class="d-flex flex-column gap-1 mt-auto mb-0 fw-semibold text-primary">
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Panas</dt>
+                    <dd class="mb-0 text-end">Rp27.000</dd>
+                  </div>
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Es</dt>
+                    <dd class="mb-0 text-end">Rp30.000</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/flat-white.jpg"
-              alt="Flat White"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Flat White</h3>
-              <p>Espresso susu dengan lapisan busa tipis.</p>
-              <div class="harga">Panas Rp27.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/flat-white.jpg"
+                alt="Flat White"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Flat White</h3>
+                <p class="card-text text-body-secondary">Espresso susu dengan lapisan busa tipis.</p>
+                <div class="mt-auto fw-semibold text-primary">Panas Rp27.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/latte.jpg"
-              alt="Latte"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Latte</h3>
-              <p>Espresso dengan susu.</p>
-              <dl class="harga harga-varian">
-                <dt>Panas</dt>
-                <dd>Rp27.000</dd>
-                <dt>Es</dt>
-                <dd>Rp30.000</dd>
-              </dl>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/latte.jpg"
+                alt="Latte"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Latte</h3>
+                <p class="card-text text-body-secondary">Espresso dengan susu.</p>
+                <dl class="d-flex flex-column gap-1 mt-auto mb-0 fw-semibold text-primary">
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Panas</dt>
+                    <dd class="mb-0 text-end">Rp27.000</dd>
+                  </div>
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Es</dt>
+                    <dd class="mb-0 text-end">Rp30.000</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/affogato.jpg"
-              alt="Affogato"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Affogato</h3>
-              <p>Es krim dengan siraman espresso.</p>
-              <div class="harga">Rp25.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/affogato.jpg"
+                alt="Affogato"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Affogato</h3>
+                <p class="card-text text-body-secondary">Es krim dengan siraman espresso.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp25.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/bali-coffee.jpg"
-              alt="Bali Coffee"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Bali Coffee</h3>
-              <p>Seduhan kopi Bali panas.</p>
-              <div class="harga">Rp15.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/bali-coffee.jpg"
+                alt="Bali Coffee"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Bali Coffee</h3>
+                <p class="card-text text-body-secondary">Seduhan kopi Bali panas.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp15.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="signature-coffee">
+      <div class="kategori-menu border-top mt-5 pt-3" id="signature-coffee">
         <h2>Signature Coffee</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/aren-latte.jpg"
-              alt="Aren Latte"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Aren Latte</h3>
-              <p>Es latte dengan manis gula aren.</p>
-              <div class="harga">Rp33.000</div>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/aren-latte.jpg"
+                alt="Aren Latte"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Aren Latte</h3>
+                <p class="card-text text-body-secondary">Es latte dengan manis gula aren.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp33.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/hazelnut-latte.jpg"
-              alt="Hazelnut Latte"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Hazelnut Latte</h3>
-              <p>Es latte dengan aroma hazelnut.</p>
-              <div class="harga">Rp33.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/hazelnut-latte.jpg"
+                alt="Hazelnut Latte"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Hazelnut Latte</h3>
+                <p class="card-text text-body-secondary">Es latte dengan aroma hazelnut.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp33.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/salted-caramel-latte.jpg"
-              alt="Salted Caramel Latte"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Salted Caramel Latte</h3>
-              <p>Es latte dengan karamel asin.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/salted-caramel-latte.jpg"
+                alt="Salted Caramel Latte"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Salted Caramel Latte</h3>
+                <p class="card-text text-body-secondary">Es latte dengan karamel asin.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/pistachio-latte.jpg"
-              alt="Pistachio Latte"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Pistachio Latte</h3>
-              <p>Es latte dengan rasa pistachio.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/pistachio-latte.jpg"
+                alt="Pistachio Latte"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Pistachio Latte</h3>
+                <p class="card-text text-body-secondary">Es latte dengan rasa pistachio.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/butterscotch-sea-salt-latte.jpg"
-              alt="Butterscotch Sea Salt Latte"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Butterscotch Sea Salt Latte</h3>
-              <p>Es latte dengan butterscotch dan garam laut.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/butterscotch-sea-salt-latte.jpg"
+                alt="Butterscotch Sea Salt Latte"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Butterscotch Sea Salt Latte</h3>
+                <p class="card-text text-body-secondary">Es latte dengan butterscotch dan garam laut.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/tiramisu-latte.jpg"
-              alt="Tiramisu Latte"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Tiramisu Latte</h3>
-              <p>Es latte bercita rasa tiramisu.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/tiramisu-latte.jpg"
+                alt="Tiramisu Latte"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Tiramisu Latte</h3>
+                <p class="card-text text-body-secondary">Es latte bercita rasa tiramisu.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="chocolate-series">
+      <div class="kategori-menu border-top mt-5 pt-3" id="chocolate-series">
         <h2>Chocolate Series</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/classic-chocolate.jpg"
-              alt="Classic Chocolate"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Classic Chocolate</h3>
-              <p>Minuman cokelat klasik.</p>
-              <dl class="harga harga-varian">
-                <dt>Panas</dt>
-                <dd>Rp25.000</dd>
-                <dt>Es</dt>
-                <dd>Rp27.000</dd>
-              </dl>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/classic-chocolate.jpg"
+                alt="Classic Chocolate"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Classic Chocolate</h3>
+                <p class="card-text text-body-secondary">Minuman cokelat klasik.</p>
+                <dl class="d-flex flex-column gap-1 mt-auto mb-0 fw-semibold text-primary">
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Panas</dt>
+                    <dd class="mb-0 text-end">Rp25.000</dd>
+                  </div>
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Es</dt>
+                    <dd class="mb-0 text-end">Rp27.000</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/hazelnut-choco.jpg"
-              alt="Hazelnut Choco"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Hazelnut Choco</h3>
-              <p>Minuman cokelat dengan rasa hazelnut.</p>
-              <dl class="harga harga-varian">
-                <dt>Panas</dt>
-                <dd>Rp27.000</dd>
-                <dt>Es</dt>
-                <dd>Rp30.000</dd>
-              </dl>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/hazelnut-choco.jpg"
+                alt="Hazelnut Choco"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Hazelnut Choco</h3>
+                <p class="card-text text-body-secondary">Minuman cokelat dengan rasa hazelnut.</p>
+                <dl class="d-flex flex-column gap-1 mt-auto mb-0 fw-semibold text-primary">
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Panas</dt>
+                    <dd class="mb-0 text-end">Rp27.000</dd>
+                  </div>
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Es</dt>
+                    <dd class="mb-0 text-end">Rp30.000</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/oreo-chocolate.jpg"
-              alt="Oreo Chocolate"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Oreo Chocolate</h3>
-              <p>Es cokelat dengan biskuit Oreo.</p>
-              <div class="harga">Rp33.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/oreo-chocolate.jpg"
+                alt="Oreo Chocolate"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Oreo Chocolate</h3>
+                <p class="card-text text-body-secondary">Es cokelat dengan biskuit Oreo.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp33.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/choco-tiramisu.jpg"
-              alt="Choco Tiramisu"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Choco Tiramisu</h3>
-              <p>Es cokelat dengan rasa tiramisu.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/choco-tiramisu.jpg"
+                alt="Choco Tiramisu"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Choco Tiramisu</h3>
+                <p class="card-text text-body-secondary">Es cokelat dengan rasa tiramisu.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/salted-cream-mochaccino.jpg"
-              alt="Salted Cream Mochaccino"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Salted Cream Mochaccino</h3>
-              <p>Es moka dengan krim asin.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/salted-cream-mochaccino.jpg"
+                alt="Salted Cream Mochaccino"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Salted Cream Mochaccino</h3>
+                <p class="card-text text-body-secondary">Es moka dengan krim asin.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="matcha-series">
+      <div class="kategori-menu border-top mt-5 pt-3" id="matcha-series">
         <h2>Matcha Series</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/classic-matcha-latte.jpg"
-              alt="Classic Matcha Latte"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Classic Matcha Latte</h3>
-              <p>Matcha dengan susu.</p>
-              <dl class="harga harga-varian">
-                <dt>Panas</dt>
-                <dd>Rp25.000</dd>
-                <dt>Es</dt>
-                <dd>Rp27.000</dd>
-              </dl>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/classic-matcha-latte.jpg"
+                alt="Classic Matcha Latte"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Classic Matcha Latte</h3>
+                <p class="card-text text-body-secondary">Matcha dengan susu.</p>
+                <dl class="d-flex flex-column gap-1 mt-auto mb-0 fw-semibold text-primary">
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Panas</dt>
+                    <dd class="mb-0 text-end">Rp25.000</dd>
+                  </div>
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Es</dt>
+                    <dd class="mb-0 text-end">Rp27.000</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/aren-matcha-latte.jpg"
-              alt="Aren Matcha Latte"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Aren Matcha Latte</h3>
-              <p>Es matcha susu dengan gula aren.</p>
-              <div class="harga">Rp28.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/aren-matcha-latte.jpg"
+                alt="Aren Matcha Latte"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Aren Matcha Latte</h3>
+                <p class="card-text text-body-secondary">Es matcha susu dengan gula aren.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp28.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/strawberry-matcha.jpg"
-              alt="Strawberry Matcha"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Strawberry Matcha</h3>
-              <p>Es matcha dengan stroberi.</p>
-              <div class="harga">Rp33.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/strawberry-matcha.jpg"
+                alt="Strawberry Matcha"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Strawberry Matcha</h3>
+                <p class="card-text text-body-secondary">Es matcha dengan stroberi.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp33.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/sea-salt-pistacchio-matcha.jpg"
-              alt="Sea Salt Pistacchio Matcha"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Sea Salt Pistacchio Matcha</h3>
-              <p>Es matcha dengan pistachio dan garam laut.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/sea-salt-pistacchio-matcha.jpg"
+                alt="Sea Salt Pistacchio Matcha"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Sea Salt Pistacchio Matcha</h3>
+                <p class="card-text text-body-secondary">Es matcha dengan pistachio dan garam laut.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/tiramisu-matcha.jpg"
-              alt="Tiramisu Matcha"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Tiramisu Matcha</h3>
-              <p>Es matcha dengan rasa tiramisu.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/tiramisu-matcha.jpg"
+                alt="Tiramisu Matcha"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Tiramisu Matcha</h3>
+                <p class="card-text text-body-secondary">Es matcha dengan rasa tiramisu.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="milkshake">
+      <div class="kategori-menu border-top mt-5 pt-3" id="milkshake">
         <h2>Milkshake</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/sticky-mango.jpg"
-              alt="Sticky Mango"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Sticky Mango</h3>
-              <p>Mangga segar, sirup sticky mango, vanila, dan susu.</p>
-              <div class="harga">Rp30.000</div>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/sticky-mango.jpg"
+                alt="Sticky Mango"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Sticky Mango</h3>
+                <p class="card-text text-body-secondary">Mangga segar, sirup sticky mango, vanila, dan susu.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp30.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/cappuccino-milkshake.jpg"
-              alt="Cappuccino Milkshake"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Cappuccino Milkshake</h3>
-              <p>Milkshake vanila dengan espresso dan susu.</p>
-              <div class="harga">Rp33.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/cappuccino-milkshake.jpg"
+                alt="Cappuccino Milkshake"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Cappuccino Milkshake</h3>
+                <p class="card-text text-body-secondary">Milkshake vanila dengan espresso dan susu.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp33.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/mocha-ship.jpg"
-              alt="Mocha Ship"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Mocha Ship</h3>
-              <p>Alpukat, espresso, es krim vanila, sirup cokelat, dan susu.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/mocha-ship.jpg"
+                alt="Mocha Ship"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Mocha Ship</h3>
+                <p class="card-text text-body-secondary">Alpukat, espresso, es krim vanila, sirup cokelat, dan susu.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/oreo-overload.jpg"
-              alt="Oreo Overload"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Oreo Overload</h3>
-              <p>Oreo dengan es krim vanila dan susu segar.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/oreo-overload.jpg"
+                alt="Oreo Overload"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Oreo Overload</h3>
+                <p class="card-text text-body-secondary">Oreo dengan es krim vanila dan susu segar.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/akurasa-shake.jpg"
-              alt="Akurasa Shake"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Akurasa Shake</h3>
-              <p>Es krim stroberi, stroberi segar, pisang, dan susu.</p>
-              <div class="harga">Rp33.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/akurasa-shake.jpg"
+                alt="Akurasa Shake"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Akurasa Shake</h3>
+                <p class="card-text text-body-secondary">Es krim stroberi, stroberi segar, pisang, dan susu.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp33.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="tea">
+      <div class="kategori-menu border-top mt-5 pt-3" id="tea">
         <h2>Tea</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/classic-tea.jpg"
-              alt="Classic Tea"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Classic Tea</h3>
-              <p>Seduhan teh klasik.</p>
-              <dl class="harga harga-varian">
-                <dt>Teko panas</dt>
-                <dd>Rp25.000</dd>
-                <dt>Gelas es</dt>
-                <dd>Rp12.000</dd>
-              </dl>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/classic-tea.jpg"
+                alt="Classic Tea"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Classic Tea</h3>
+                <p class="card-text text-body-secondary">Seduhan teh klasik.</p>
+                <dl class="d-flex flex-column gap-1 mt-auto mb-0 fw-semibold text-primary">
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Teko panas</dt>
+                    <dd class="mb-0 text-end">Rp25.000</dd>
+                  </div>
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Gelas es</dt>
+                    <dd class="mb-0 text-end">Rp12.000</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/lemon-tea.jpg"
-              alt="Lemon Tea"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Lemon Tea</h3>
-              <p>Es teh dengan lemon.</p>
-              <div class="harga">Rp18.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/lemon-tea.jpg"
+                alt="Lemon Tea"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Lemon Tea</h3>
+                <p class="card-text text-body-secondary">Es teh dengan lemon.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp18.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/lychee-tea.jpg"
-              alt="Lychee Tea"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Lychee Tea</h3>
-              <p>Es teh dengan leci.</p>
-              <div class="harga">Rp18.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/lychee-tea.jpg"
+                alt="Lychee Tea"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Lychee Tea</h3>
+                <p class="card-text text-body-secondary">Es teh dengan leci.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp18.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/peach-tea.jpg"
-              alt="Peach Tea"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Peach Tea</h3>
-              <p>Es teh dengan persik.</p>
-              <div class="harga">Rp18.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/peach-tea.jpg"
+                alt="Peach Tea"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Peach Tea</h3>
+                <p class="card-text text-body-secondary">Es teh dengan persik.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp18.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="yakult-series">
+      <div class="kategori-menu border-top mt-5 pt-3" id="yakult-series">
         <h2>Yakult Series</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/strawberry-yakult.jpg"
-              alt="Strawberry Yakult"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Strawberry Yakult</h3>
-              <p>Yakult dengan rasa stroberi.</p>
-              <div class="harga">Rp23.000</div>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/strawberry-yakult.jpg"
+                alt="Strawberry Yakult"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Strawberry Yakult</h3>
+                <p class="card-text text-body-secondary">Yakult dengan rasa stroberi.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp23.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/mango-yakult.jpg"
-              alt="Mango Yakult"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Mango Yakult</h3>
-              <p>Yakult dengan rasa mangga.</p>
-              <div class="harga">Rp23.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/mango-yakult.jpg"
+                alt="Mango Yakult"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Mango Yakult</h3>
+                <p class="card-text text-body-secondary">Yakult dengan rasa mangga.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp23.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/lychee-yakult.jpg"
-              alt="Lychee Yakult"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Lychee Yakult</h3>
-              <p>Yakult dengan rasa leci.</p>
-              <div class="harga">Rp23.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/lychee-yakult.jpg"
+                alt="Lychee Yakult"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Lychee Yakult</h3>
+                <p class="card-text text-body-secondary">Yakult dengan rasa leci.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp23.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/peach-yakult.jpg"
-              alt="Peach Yakult"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Peach Yakult</h3>
-              <p>Yakult dengan rasa persik.</p>
-              <div class="harga">Rp23.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/peach-yakult.jpg"
+                alt="Peach Yakult"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Peach Yakult</h3>
+                <p class="card-text text-body-secondary">Yakult dengan rasa persik.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp23.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="juice">
+      <div class="kategori-menu border-top mt-5 pt-3" id="juice">
         <h2>Juice</h2>
-        <p>Campur pilihan buah +Rp5.000.</p>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/watermelon.jpg"
-              alt="Watermelon"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Watermelon</h3>
-              <p>Jus semangka.</p>
-              <div class="harga">Rp22.000</div>
-            </div>
-          </article>
+        <p class="text-body-secondary">Campur pilihan buah +Rp5.000.</p>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/watermelon.jpg"
+                alt="Watermelon"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Watermelon</h3>
+                <p class="card-text text-body-secondary">Jus semangka.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp22.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/orange.jpg"
-              alt="Orange"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Orange</h3>
-              <p>Jus jeruk.</p>
-              <div class="harga">Rp22.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/orange.jpg"
+                alt="Orange"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Orange</h3>
+                <p class="card-text text-body-secondary">Jus jeruk.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp22.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/pineapple.jpg"
-              alt="Pineapple"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Pineapple</h3>
-              <p>Jus nanas.</p>
-              <div class="harga">Rp22.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/pineapple.jpg"
+                alt="Pineapple"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Pineapple</h3>
+                <p class="card-text text-body-secondary">Jus nanas.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp22.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/banana.jpg"
-              alt="Banana"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Banana</h3>
-              <p>Jus pisang.</p>
-              <div class="harga">Rp22.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/banana.jpg"
+                alt="Banana"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Banana</h3>
+                <p class="card-text text-body-secondary">Jus pisang.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp22.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/papaya.jpg"
-              alt="Papaya"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Papaya</h3>
-              <p>Jus pepaya.</p>
-              <div class="harga">Rp22.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/papaya.jpg"
+                alt="Papaya"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Papaya</h3>
+                <p class="card-text text-body-secondary">Jus pepaya.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp22.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/melon.jpg"
-              alt="Melon"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Melon</h3>
-              <p>Jus melon.</p>
-              <div class="harga">Rp22.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/melon.jpg"
+                alt="Melon"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Melon</h3>
+                <p class="card-text text-body-secondary">Jus melon.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp22.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/mango.jpg"
-              alt="Mango"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Mango</h3>
-              <p>Jus mangga.</p>
-              <div class="harga">Rp25.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/mango.jpg"
+                alt="Mango"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Mango</h3>
+                <p class="card-text text-body-secondary">Jus mangga.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp25.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/avocado.jpg"
-              alt="Avocado"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Avocado</h3>
-              <p>Jus alpukat.</p>
-              <div class="harga">Rp25.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/avocado.jpg"
+                alt="Avocado"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Avocado</h3>
+                <p class="card-text text-body-secondary">Jus alpukat.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp25.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="bali-aga">
+      <div class="kategori-menu border-top mt-5 pt-3" id="bali-aga">
         <h2>Bali Aga</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/kelapa-muda-utuh-.jpg"
-              alt="Kelapa Muda (Utuh)"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Kelapa Muda (Utuh)</h3>
-              <p>Air dan daging kelapa muda dalam buahnya.</p>
-              <div class="harga">Rp20.000</div>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/kelapa-muda-utuh-.jpg"
+                alt="Kelapa Muda (Utuh)"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Kelapa Muda (Utuh)</h3>
+                <p class="card-text text-body-secondary">Air dan daging kelapa muda dalam buahnya.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp20.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/es-kecebong.jpg"
-              alt="Es Kecebong"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Es Kecebong</h3>
-              <p>Minuman es dengan biji selasih.</p>
-              <div class="harga">Rp15.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/es-kecebong.jpg"
+                alt="Es Kecebong"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Es Kecebong</h3>
+                <p class="card-text text-body-secondary">Minuman es dengan biji selasih.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp15.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/es-teler.jpg"
-              alt="Es Teler"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Es Teler</h3>
-              <p>Es buah dengan kelapa muda.</p>
-              <div class="harga">Rp23.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/es-teler.jpg"
+                alt="Es Teler"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Es Teler</h3>
+                <p class="card-text text-body-secondary">Es buah dengan kelapa muda.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp23.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/es-buah.jpg"
-              alt="Es Buah"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Es Buah</h3>
-              <p>Campuran potongan buah dalam sajian dingin.</p>
-              <div class="harga">Rp23.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/es-buah.jpg"
+                alt="Es Buah"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Es Buah</h3>
+                <p class="card-text text-body-secondary">Campuran potongan buah dalam sajian dingin.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp23.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/es-kelapa-muda.jpg"
-              alt="Es Kelapa Muda"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Es Kelapa Muda</h3>
-              <p>Es dengan air dan serutan kelapa muda.</p>
-              <div class="harga">Rp15.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/es-kelapa-muda.jpg"
+                alt="Es Kelapa Muda"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Es Kelapa Muda</h3>
+                <p class="card-text text-body-secondary">Es dengan air dan serutan kelapa muda.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp15.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/es-gula.jpg"
-              alt="Es Gula"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Es Gula</h3>
-              <p>Minuman es dengan gula.</p>
-              <div class="harga">Rp12.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/es-gula.jpg"
+                alt="Es Gula"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Es Gula</h3>
+                <p class="card-text text-body-secondary">Minuman es dengan gula.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp12.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="softdrink-beer">
+      <div class="kategori-menu border-top mt-5 pt-3" id="softdrink-beer">
         <h2>Softdrink &amp; Beer</h2>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/coke.jpg"
-              alt="Coke"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Coke</h3>
-              <p>Minuman kola berkarbonasi.</p>
-              <div class="harga">Rp15.000</div>
-            </div>
-          </article>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/coke.jpg"
+                alt="Coke"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Coke</h3>
+                <p class="card-text text-body-secondary">Minuman kola berkarbonasi.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp15.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/coke-zero.jpg"
-              alt="Coke Zero"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Coke Zero</h3>
-              <p>Kola tanpa gula.</p>
-              <div class="harga">Rp15.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/coke-zero.jpg"
+                alt="Coke Zero"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Coke Zero</h3>
+                <p class="card-text text-body-secondary">Kola tanpa gula.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp15.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/sprite.jpg"
-              alt="Sprite"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Sprite</h3>
-              <p>Minuman soda rasa lemon dan jeruk nipis.</p>
-              <div class="harga">Cek harga di restoran</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/sprite.jpg"
+                alt="Sprite"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Sprite</h3>
+                <p class="card-text text-body-secondary">Minuman soda rasa lemon dan jeruk nipis.</p>
+                <div class="mt-auto fw-semibold text-primary">Cek harga di restoran</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/tonic-water.jpg"
-              alt="Tonic Water"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Tonic Water</h3>
-              <p>Air tonik berkarbonasi.</p>
-              <div class="harga">Cek harga di restoran</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/tonic-water.jpg"
+                alt="Tonic Water"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Tonic Water</h3>
+                <p class="card-text text-body-secondary">Air tonik berkarbonasi.</p>
+                <div class="mt-auto fw-semibold text-primary">Cek harga di restoran</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/soda-water.jpg"
-              alt="Soda Water"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Soda Water</h3>
-              <p>Air soda.</p>
-              <div class="harga">Cek harga di restoran</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/soda-water.jpg"
+                alt="Soda Water"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Soda Water</h3>
+                <p class="card-text text-body-secondary">Air soda.</p>
+                <div class="mt-auto fw-semibold text-primary">Cek harga di restoran</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/large-bintang.jpg"
-              alt="Large Bintang"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Large Bintang</h3>
-              <p>Bir Bintang ukuran besar.</p>
-              <div class="harga">Rp50.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/large-bintang.jpg"
+                alt="Large Bintang"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Large Bintang</h3>
+                <p class="card-text text-body-secondary">Bir Bintang ukuran besar.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp50.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/small-bintang.jpg"
-              alt="Small Bintang"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Small Bintang</h3>
-              <p>Bir Bintang ukuran kecil.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/small-bintang.jpg"
+                alt="Small Bintang"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Small Bintang</h3>
+                <p class="card-text text-body-secondary">Bir Bintang ukuran kecil.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/bintang-radler.jpg"
-              alt="Bintang Radler"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Bintang Radler</h3>
-              <p>Bir Bintang Radler rasa buah.</p>
-              <div class="harga">Rp35.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/bintang-radler.jpg"
+                alt="Bintang Radler"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Bintang Radler</h3>
+                <p class="card-text text-body-secondary">Bir Bintang Radler rasa buah.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp35.000</div>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/mineral-water.jpg"
-              alt="Mineral Water"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Mineral Water</h3>
-              <p>Air mineral.</p>
-              <div class="harga">Rp12.000</div>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/mineral-water.jpg"
+                alt="Mineral Water"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Mineral Water</h3>
+                <p class="card-text text-body-secondary">Air mineral.</p>
+                <div class="mt-auto fw-semibold text-primary">Rp12.000</div>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="kategori-menu" id="spirits">
+      <div class="kategori-menu border-top mt-5 pt-3" id="spirits">
         <h2>Spirits</h2>
-        <p>Pembelian per botol termasuk dua mixer dan camilan kecil.</p>
-        <div class="daftar-menu">
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/jameson-irish.jpg"
-              alt="Jameson Irish"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Jameson Irish</h3>
-              <p>Wiski Irlandia per takaran atau botol.</p>
-              <dl class="harga harga-varian">
-                <dt>Shot</dt>
-                <dd>Rp80.000</dd>
-                <dt>Botol</dt>
-                <dd>Rp1.000.000</dd>
-              </dl>
-            </div>
-          </article>
+        <p class="text-body-secondary">Pembelian per botol termasuk dua mixer dan camilan kecil.</p>
+        <div class="row row-cols-2 row-cols-lg-4 g-2 g-sm-3 mt-2">
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/jameson-irish.jpg"
+                alt="Jameson Irish"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Jameson Irish</h3>
+                <p class="card-text text-body-secondary">Wiski Irlandia per takaran atau botol.</p>
+                <dl class="d-flex flex-column gap-1 mt-auto mb-0 fw-semibold text-primary">
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Shot</dt>
+                    <dd class="mb-0 text-end">Rp80.000</dd>
+                  </div>
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Botol</dt>
+                    <dd class="mb-0 text-end">Rp1.000.000</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
 
-          <article class="kartu-menu">
-            <img
-              class="foto-menu"
-              src="images/menu/captain-morgan-spiced.jpg"
-              alt="Captain Morgan Spiced"
-              loading="lazy"
-              width="420"
-              height="300"
-            />
-            <div class="isi-menu">
-              <h3>Captain Morgan Spiced</h3>
-              <p>Rum berbumbu per takaran atau botol.</p>
-              <dl class="harga harga-varian">
-                <dt>Shot</dt>
-                <dd>Rp50.000</dd>
-                <dt>Botol</dt>
-                <dd>Rp550.000</dd>
-              </dl>
-            </div>
-          </article>
+          <div class="col">
+            <article class="card kartu-menu h-100 overflow-hidden">
+              <img
+                class="card-img-top foto-menu object-fit-cover"
+                src="images/menu/captain-morgan-spiced.jpg"
+                alt="Captain Morgan Spiced"
+                loading="lazy"
+                width="420"
+                height="300"
+              />
+              <div class="card-body d-flex flex-column p-2 p-sm-3">
+                <h3 class="card-title h6 mb-2">Captain Morgan Spiced</h3>
+                <p class="card-text text-body-secondary">Rum berbumbu per takaran atau botol.</p>
+                <dl class="d-flex flex-column gap-1 mt-auto mb-0 fw-semibold text-primary">
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Shot</dt>
+                    <dd class="mb-0 text-end">Rp50.000</dd>
+                  </div>
+                  <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between gap-1 gap-sm-2">
+                    <dt class="fw-semibold">Botol</dt>
+                    <dd class="mb-0 text-end">Rp550.000</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
 
-    <footer>
-      <div class="wadah-footer">
-        <div class="isi-footer">
-          <div>
-            <a class="nama-cafe" href="index.html">AKURASA</a>
-            <p>
+    <footer class="border-top bg-body-tertiary pt-4 pb-3">
+      <div class="container wadah-halaman">
+        <div class="row g-4 g-lg-5">
+          <div class="col-md-4">
+            <a class="nama-cafe d-block text-body fw-bold text-decoration-none mb-2" href="index.html">AKURASA</a>
+            <p class="text-body-secondary">
               Tempat menikmati hidangan, suasana hangat, dan cerita yang
               berkesan di Ubud, Bali.
             </p>
           </div>
-          <div>
+          <div class="col-md-4">
             <strong> Jelajahi </strong>
-            <nav class="tautan-footer" aria-label="Navigasi footer">
-              <a href="index.html"> Beranda </a>
-              <a href="menu.html"> Menu </a>
-              <a href="galeri.html"> Galeri </a>
-              <a href="kontak.html"> Kontak </a>
+            <nav class="nav d-flex flex-wrap gap-2 column-gap-3 mt-2" aria-label="Navigasi footer">
+              <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="index.html"> Beranda </a>
+              <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="menu.html"> Menu </a>
+              <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="galeri.html"> Galeri </a>
+              <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="tentang-kami.html"> Tentang Kami </a>
             </nav>
           </div>
+          <div class="col-md-4" id="kontak-footer" aria-labelledby="judul-kontak-footer">
+            <strong id="judul-kontak-footer">Kontak dan Lokasi</strong>
+            <div class="vstack gap-2 align-items-start mt-2 small">
+              <a class="d-flex align-items-baseline gap-2 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://www.google.com/maps/search/?api=1&amp;query=AKURASA%2C%20Jl.%20Dangin%20Labak%20No.%20II%2C%20Singakerta%2C%20Ubud%2C%20Bali%2080571">
+                <i class="fa-solid fa-location-dot fa-fw text-primary flex-shrink-0" aria-hidden="true"></i>
+                <span>Jl. Dangin Labak No. II, Singakerta, Ubud, Gianyar, Bali 80571</span>
+              </a>
+              <a class="d-flex align-items-baseline gap-2 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://wa.me/6282314693140">
+                <i class="fa-brands fa-whatsapp fa-fw text-primary flex-shrink-0" aria-hidden="true"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a class="d-flex align-items-baseline gap-2 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://www.instagram.com/akurasa.ubud?bqrl=a3FpbXVzNmJyYngz">
+                <i class="fa-brands fa-instagram fa-fw text-primary flex-shrink-0" aria-hidden="true"></i>
+                <span>Instagram</span>
+              </a>
+              <a class="d-flex align-items-baseline gap-2 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://linktr.ee/akurasaubud?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAVrYEdleHRuA2FlbQIxMQBwZG9mAnNydGMGYXBwX2lkDzU2NzA2NzM0MzM1MjQyNwABpxk1pA6ZG0eQS9rk02yGtnL_5nn-lodij7qAYlXDRduI0tRqXCJdMqxHfafN_aem_oMFq9vjvWbjLoJb4VoWf6Q">
+                <i class="fa-brands fa-linktree fa-fw text-primary flex-shrink-0" aria-hidden="true"></i>
+                <span>Linktree</span>
+              </a>
+                <a class="d-flex align-items-baseline gap-2 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                href="https://www.tiktok.com/@akurasacoffee?_r=1&_t=ZS-9BZ4E9pFYIu"
+              >
+                <i class="fa-brands fa-tiktok fa-fw text-primary flex-shrink-0" aria-hidden="true"></i>
+                <span>TikTok</span>
+            </div>
+          </div>
         </div>
-        <div class="hak-cipta">AKURASA</div>
+        <div class="border-top mt-4 pt-3 small text-body-secondary">AKURASA</div>
       </div>
     </footer>
     <script src="script.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </body>
 </html>

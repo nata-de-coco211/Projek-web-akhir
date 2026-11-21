@@ -1,47 +1,33 @@
+const katalog = document.querySelector(".katalog, #best-seller");
+
 document.querySelectorAll(".kartu-menu").forEach((kartu) => {
-  const judul = kartu.querySelector(".isi-menu h3");
-  const isi = kartu.querySelector(".isi-menu");
-  const harga = isi && isi.querySelector(".harga");
-  if (!judul || !isi || !harga) {
-    return;
-  }
+  const isiKartu = kartu.querySelector(".card-body");
+  const harga = isiKartu?.querySelector(".mt-auto.fw-semibold.text-primary");
 
-  const namaMenu = judul.textContent.trim();
-  const kunciFavorit = `akurasa-favorit:${namaMenu.toLowerCase()}`;
-  const tombolFavorit = document.createElement("button");
-  tombolFavorit.type = "button";
-  tombolFavorit.className = "tombol-favorit";
-  tombolFavorit.setAttribute("aria-pressed", "false");
+  if (!harga) return;
 
-  function perbaruiTombol(isFavorit) {
-    tombolFavorit.textContent = isFavorit ? "♥" : "♡";
-    tombolFavorit.setAttribute("aria-pressed", String(isFavorit));
-    tombolFavorit.setAttribute(
-      "aria-label",
-      `${isFavorit ? "Hapus" : "Tambahkan"} ${namaMenu} ${
-        isFavorit ? "dari" : "ke"
-      } favorit`,
-    );
-  }
-
-  const isFavorit = localStorage.getItem(kunciFavorit) === "true";
-  perbaruiTombol(isFavorit);
-  tombolFavorit.addEventListener("click", () => {
-    const favoritBaru = tombolFavorit.getAttribute("aria-pressed") !== "true";
-    if (favoritBaru) {
-      localStorage.setItem(kunciFavorit, "true");
-    } else {
-      localStorage.removeItem(kunciFavorit);
-    }
-    perbaruiTombol(favoritBaru);
-  });
   const barisHarga = document.createElement("div");
-  barisHarga.className = "baris-harga-favorit";
-  harga.parentNode.insertBefore(barisHarga, harga);
-  barisHarga.append(harga, tombolFavorit);
-});
+  barisHarga.className = "baris-harga-love";
 
-const katalog = document.querySelector(".katalog");
+  const tombolLove = document.createElement("button");
+  tombolLove.type = "button";
+  tombolLove.className = "tombol-love";
+  tombolLove.setAttribute("aria-label", "Sukai menu");
+  tombolLove.setAttribute("aria-pressed", "false");
+  tombolLove.innerHTML = '<i class="fa-regular fa-heart" aria-hidden="true"></i>';
+
+  tombolLove.addEventListener("click", () => {
+    const aktif = tombolLove.classList.toggle("aktif");
+    tombolLove.setAttribute("aria-pressed", String(aktif));
+    tombolLove.setAttribute("aria-label", aktif ? "Batalkan suka menu" : "Sukai menu");
+    tombolLove.innerHTML = aktif
+      ? '<i class="fa-solid fa-heart" aria-hidden="true"></i>'
+      : '<i class="fa-regular fa-heart" aria-hidden="true"></i>';
+  });
+
+  harga.before(barisHarga);
+  barisHarga.append(harga, tombolLove);
+});
 
 if (katalog) {
   const daftarKategori = Array.from(
@@ -50,6 +36,8 @@ if (katalog) {
   const tombolFilter = document.querySelector("#filter-menu");
   const informasiJumlah = document.querySelector("#jumlah-menu");
   const kategoriMakanan = new Set([
+    "bakery",
+    "hidangan-utama",
     "brunch",
     "rujak-dan-tipat",
     "menu-indonesia",
@@ -57,6 +45,7 @@ if (katalog) {
     "kids-snack",
   ]);
   const kategoriMinuman = new Set([
+    "minuman-favorit",
     "coffee",
     "signature-coffee",
     "chocolate-series",
@@ -99,9 +88,10 @@ if (katalog) {
     function buatTombol(nama, filter, jumlah) {
       const tombol = document.createElement("button");
       tombol.type = "button";
-      tombol.className = "tombol tombol-filter";
+      tombol.className = "btn btn-outline-dark";
       tombol.dataset.filter = filter;
       tombol.textContent = `${nama} (${jumlah})`;
+      tombol.classList.toggle("active", filter === "semua");
       tombol.setAttribute("aria-pressed", String(filter === "semua"));
       tombol.addEventListener("click", () => {
         kategori.forEach((item) => {
@@ -112,10 +102,9 @@ if (katalog) {
         });
 
         tombolFilter.querySelectorAll("button").forEach((item) => {
-          item.setAttribute(
-            "aria-pressed",
-            String(item.dataset.filter === filter),
-          );
+          const aktif = item.dataset.filter === filter;
+          item.classList.toggle("active", aktif);
+          item.setAttribute("aria-pressed", String(aktif));
         });
 
         const jumlahTampil =
@@ -131,7 +120,8 @@ if (katalog) {
 
     buatTombol("Semua", "semua", jumlahSemua);
 
-    ["makanan", "minuman", "lainnya"].forEach((jenis) => {
+    const jenisFilter = katalog.id === "best-seller" ? [] : ["makanan", "minuman", "lainnya"];
+    jenisFilter.forEach((jenis) => {
       const jumlah = jumlahKategori(jenis);
       if (jumlah > 0) {
         const nama = jenis.charAt(0).toUpperCase() + jenis.slice(1);

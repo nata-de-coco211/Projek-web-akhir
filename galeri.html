@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKURASA | Galeri</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+      integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar navbar-expand-md fixed-top navigasi mx-auto rounded-pill bg-body-tertiary py-2 px-2 px-md-3">
+      <div class="container-fluid px-2">
+        <a class="navbar-brand p-0 me-2" href="index.html" aria-label="AKURASA Beranda">
+          <img class="d-block" src="images/logo.png" alt="Logo AKURASA" width="56" height="56" />
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigasi-utama"
+          aria-controls="navigasi-utama"
+          aria-expanded="false"
+          aria-label="Buka atau tutup menu navigasi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="collapse navbar-collapse" id="navigasi-utama" aria-label="Navigasi utama">
+          <div class="navbar-nav ms-md-auto gap-md-2 py-2 py-md-0 small">
+            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="nav-link" href="menu.html">Menu</a>
+            <a class="nav-link active" href="galeri.html" aria-current="page">Galeri</a>
+            <a class="nav-link" href="tentang-kami.html">Tentang Kami</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container wadah-halaman halaman-dalam pb-5">
+      <h1 class="display-5 fw-medium mb-4">Suasana AKURASA</h1>
+      <div class="row g-4">
+        <div class="col-12">
+          <figure class="card h-100 mb-0">
+            <div class="masking-galeri mx-2 mt-2" role="img" aria-label="Area makan AKURASA">
+              <span class="panel-foto" style="--urutan-panel: 0"></span>
+              <span class="panel-foto" style="--urutan-panel: 1"></span>
+              <span class="panel-foto" style="--urutan-panel: 2"></span>
+              <span class="panel-foto" style="--urutan-panel: 3"></span>
+              <span class="panel-foto" style="--urutan-panel: 4"></span>
+            </div>
+            <figcaption class="card-body small text-body-secondary">Area makan</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <figure class="card h-100 mb-0 overflow-hidden">
+            <div class="ratio ratio-16x9">
+              <img class="object-fit-cover" src="images/menu/suasana2.jpeg" alt="Tampak depan AKURASA" loading="lazy" />
+            </div>
+            <figcaption class="card-body small text-body-secondary">Tampak depan</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <figure class="card h-100 mb-0 overflow-hidden">
+            <div class="ratio ratio-16x9">
+              <img class="object-fit-cover" src="images/akurasa.png" alt="Semangkuk rujak kuah pindang" loading="lazy" />
+            </div>
+            <figcaption class="card-body small text-body-secondary">Logo AKURASA</figcaption>
+          </figure>
+        </div>
+      </div>
+    </main>
+
+    <footer class="border-top bg-body-tertiary pt-4 pb-3">
+      <div class="container wadah-halaman">
+        <div class="row g-4 g-lg-5">
+          <div class="col-md-4">
+            <a class="nama-cafe d-block text-body fw-bold text-decoration-none mb-2" href="index.html">AKURASA</a>
+            <p class="text-body-secondary mb-0">
+              Tempat menikmati hidangan, suasana hangat, dan cerita yang
+              berkesan di Ubud, Bali.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <strong> Jelajahi </strong>
+            <nav class="nav d-flex flex-wrap gap-2 column-gap-3 mt-2" aria-label="Navigasi footer">
+              <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="index.html"> Beranda </a>
+              <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="menu.html"> Menu </a>
+              <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="galeri.html"> Galeri </a>
+            </nav>
+          </div>
+          <div class="col-md-4" id="kontak-footer" aria-labelledby="judul-kontak-footer">
+            <strong id="judul-kontak-footer">Kontak dan Lokasi</strong>
+            <div class="vstack gap-2 align-items-start mt-2 small">
+              <a class="d-flex align-items-baseline gap-2 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://www.google.com/maps/search/?api=1&amp;query=AKURASA%2C%20Jl.%20Dangin%20Labak%20No.%20II%2C%20Singakerta%2C%20Ubud%2C%20Bali%2080571">
+                <i class="fa-solid fa-location-dot fa-fw text-primary flex-shrink-0" aria-hidden="true"></i>
+                <span>Jl. Dangin Labak No. II, Singakerta, Ubud, Gianyar, Bali 80571</span>
+              </a>
+              <a class="d-flex align-items-baseline gap-2 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://wa.me/6282314693140">
+                <i class="fa-brands fa-whatsapp fa-fw text-primary flex-shrink-0" aria-hidden="true"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a class="d-flex align-items-baseline gap-2 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://www.instagram.com/akurasa.ubud?bqrl=a3FpbXVzNmJyYngz">
+                <i class="fa-brands fa-instagram fa-fw text-primary flex-shrink-0" aria-hidden="true"></i>
+                <span>Instagram</span>
+              </a>
+              <a class="d-flex align-items-baseline gap-2 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://linktr.ee/akurasaubud?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAVrYEdleHRuA2FlbQIxMQBwZG9mAnNydGMGYXBwX2lkDzU2NzA2NzM0MzM1MjQyNwABpxk1pA6ZG0eQS9rk02yGtnL_5nn-lodij7qAYlXDRduI0tRqXCJdMqxHfafN_aem_oMFq9vjvWbjLoJb4VoWf6Q">
+                <i class="fa-brands fa-linktree fa-fw text-primary flex-shrink-0" aria-hidden="true"></i>
+                <span>Linktree</span>
+              </a>
+                <a class="d-flex align-items-baseline gap-2 link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover"
+                href="https://www.tiktok.com/@akurasacoffee?_r=1&_t=ZS-9BZ4E9pFYIu"
+              >
+                <i class="fa-brands fa-tiktok fa-fw text-primary flex-shrink-0" aria-hidden="true"></i>
+                <span>TikTok</span>
+            </div>
+          </div>
+        </div>
+        <div class="border-top mt-4 pt-3 small text-body-secondary">AKURASA</div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </body>
+</html>
