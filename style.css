@@ -372,7 +372,6 @@ p {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-<<<<<<< Updated upstream
 .kartu-menu:hover {
     box-shadow: 0 0 10px color-mix(in srgb, var(--teks) 37%, transparent);
     transform: scale(1.05);
@@ -427,8 +426,6 @@ p {
     overflow: hidden;
 }
 
-=======
->>>>>>> Stashed changes
 .foto-menu {
     display: block;
     width: 100%;
@@ -502,31 +499,5 @@ footer {
     .isi-footer {
         grid-template-columns: 1fr;
     }
-}
-
-
-.baris-harga-love {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin-top: auto;
-}
-
-.baris-harga-love > .mt-auto {
-    margin-top: 0 !important;
-}
-
-.tombol-love {
-    border: 0;
-    background: transparent;
-    color: var(--bs-secondary-color);
-    padding: 0.25rem;
-    font-size: 1.25rem;
-    line-height: 1;
-}
-
-.tombol-love.aktif {
-    color: #dc3545;
 }
 

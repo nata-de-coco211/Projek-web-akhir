@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 document.querySelectorAll(".kartu-menu").forEach((kartu) => {
   const judul = kartu.querySelector(".isi-menu h3");
   const isi = kartu.querySelector(".isi-menu");
@@ -43,9 +42,6 @@ document.querySelectorAll(".kartu-menu").forEach((kartu) => {
 });
 
 const katalog = document.querySelector(".katalog");
-=======
-const katalog = document.querySelector(".katalog, #best-seller");
->>>>>>> Stashed changes
 
 if (katalog) {
   const daftarKategori = Array.from(
@@ -152,45 +148,10 @@ if (katalog) {
 }
 
 
-<<<<<<< Updated upstream
-let jamSekarang = new Date().getHours();
-
-if (jamSekarang >= 9 && jamSekarang < 23) {
-  document.getElementById("statustoko").textContent = 'Buka';
-  document.getElementById("statustoko").style.color = 'green';
+const statusToko = document.getElementById("statustoko");
+if (statusToko) {
+  const jamSekarang = new Date().getHours();
+  const sedangBuka = jamSekarang >= 9 && jamSekarang < 23;
+  statusToko.textContent = sedangBuka ? "Buka" : "Tutup";
+  statusToko.style.color = sedangBuka ? "green" : "red";
 }
-else {
-  document.getElementById("statustoko").textContent = 'Tutup';
-  document.getElementById("statustoko").style.color = 'red';
-}
-
-=======
-document.querySelectorAll(".kartu-menu").forEach((kartu) => {
-  const isiKartu = kartu.querySelector(".card-body");
-  const harga = isiKartu?.querySelector(".mt-auto.fw-semibold.text-primary");
-
-  if (!harga) return;
-
-  const barisHarga = document.createElement("div");
-  barisHarga.className = "baris-harga-love";
-
-  const tombolLove = document.createElement("button");
-  tombolLove.type = "button";
-  tombolLove.className = "tombol-love";
-  tombolLove.setAttribute("aria-label", "Sukai menu");
-  tombolLove.setAttribute("aria-pressed", "false");
-  tombolLove.innerHTML = '<i class="fa-regular fa-heart" aria-hidden="true"></i>';
-
-  tombolLove.addEventListener("click", () => {
-    const aktif = tombolLove.classList.toggle("aktif");
-    tombolLove.setAttribute("aria-pressed", String(aktif));
-    tombolLove.setAttribute("aria-label", aktif ? "Batalkan suka menu" : "Sukai menu");
-    tombolLove.innerHTML = aktif
-      ? '<i class="fa-solid fa-heart" aria-hidden="true"></i>'
-      : '<i class="fa-regular fa-heart" aria-hidden="true"></i>';
-  });
-
-    harga.before(barisHarga);
-  barisHarga.append(harga, tombolLove);
-});
->>>>>>> Stashed changes
